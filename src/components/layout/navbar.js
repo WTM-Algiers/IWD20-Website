@@ -9,5 +9,24 @@ export default function navbar() {
     <Link to="/contact">Contact Us</Link>,
     <Link to="/register">Register</Link>,
   ]
-  return <></>
+  return (
+    <>
+      <ul
+        style={{
+          display: "flex",
+          margin: "auto 0",
+        }}
+      >
+        {links.map(link => (
+          <li
+            style={{
+              marginLeft: "10%",
+            }}
+          >
+            {link}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
 }

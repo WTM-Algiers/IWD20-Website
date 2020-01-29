@@ -6,6 +6,7 @@ import NavBar from "./navbar"
 // * Add styles to styles folder
 const Header = () => (
   <header>
+    <h1>Hello world</h1>
     <NavBar></NavBar>
   </header>
 )
