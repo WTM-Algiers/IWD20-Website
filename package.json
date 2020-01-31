@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "iwd_20",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The International Women's Day Event organized by WTM Algiers of GDG Algiers official website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@MeridjaNassim",
   "dependencies": {
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/WTM-Algiers/IWD20-Website"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
