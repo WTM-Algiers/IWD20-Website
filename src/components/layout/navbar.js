@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import "../../styles/navbar.css"
+import styled from "styled-components"
 const links = [
   <Link to="/">Home</Link>,
   <Link to="/about">About</Link>,
@@ -8,27 +9,27 @@ const links = [
   <Link to="/contact">Contact Us</Link>,
   <Link to="/register">Register</Link>,
 ]
-export default function navbar() {
-  
-  return (
-    <>
-      <ul
-        style={{
-          display: "flex",
-          margin: "auto 0",
-        }}
-      >
-        {links.map(link => (
-          <li
-            style={{
-              marginLeft: "10%",
-            }}
-          >
-            {link}
-          </li>
-        ))}
-      </ul>
-    </>
-  )
+export default function Navbar() {
+  return <StyledNavbar>{links}</StyledNavbar>
 }
-export {links}
+const StyledNavbar = styled.nav`
+  display: flex;
+  margin-left: auto;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(10, 10, 10);
+    opacity: 0.5;
+    &:hover {
+      opacity: 0.75;
+      color: #e580af;
+    }
+  }
+`
