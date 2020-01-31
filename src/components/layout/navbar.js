@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import "../../styles/navbar.css"
 import styled from "styled-components"
 const links = [
   <Link to="/">Home</Link>,
@@ -21,6 +20,7 @@ const StyledNavbar = styled.nav`
   font-family: sans-serif;
   @media screen and (max-width: 768px) {
     width: 80%;
+    margin-right: 10px;
   }
   a {
     text-decoration: none;

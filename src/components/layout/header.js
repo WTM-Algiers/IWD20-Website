@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
   display: flex;
   height: 10vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   justify-content: flex-start;
   background-color: #eeeff1;
 
