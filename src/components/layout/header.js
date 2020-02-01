@@ -20,7 +20,7 @@ const Header = () => (
       International Women's Day{" "}
       <span
         style={{
-          color: "#4285F4",
+          color: "#584FFA",
         }}
       >
         2020

@@ -47,9 +47,10 @@ const StyledNavbar = styled.nav`
       border-bottom: 2px solid #4285f4;
       &#register {
         color: white;
-        background-color: #5390f5;
+        background-color: #584ffa;
         padding: 10px 20px;
         border-radius: 5px;
+        border-bottom: #584ffa;
       }
     }
     @media screen and (max-width: 768px) {

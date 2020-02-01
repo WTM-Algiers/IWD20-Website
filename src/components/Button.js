@@ -15,5 +15,6 @@ const Button = styled.button`
   &:hover {
     background-color: #5047f8;
   }
+  text-decoration: none;
 `
 export default Button

@@ -25,7 +25,7 @@ export default function footer() {
       </Container>
       <Container>
         <Title>Social Media</Title>
-        <p>Lets stay in social 😉</p>
+        <p>Lets stay social 😉</p>
       </Container>
     </StyledFooter>
   )
@@ -94,7 +94,7 @@ const Input = styled.div`
 const SendBtn = styled.button`
   width: 20%;
   color: white;
-  background: rgb(83, 144, 245);
+  background: #584ffa;
   height: 50%;
   border: 0px solid rgb(83, 144, 245);
   padding: 2px;

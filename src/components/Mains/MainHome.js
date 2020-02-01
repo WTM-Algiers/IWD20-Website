@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { MainWrapper as Wrapper } from "../Container"
 import Button from "../Button"
 import Track from "../Track"
-import Link from "gatsby"
+import Record from "../Record"
+import { Link } from "gatsby"
 /// pictures :
 import homeHead from "../../images/home_head.png"
 import homeAbout from "../../images/home_about.png"
@@ -24,7 +25,9 @@ export default function MainHome() {
             Higher School of Computer Science ESI ex INI<br></br>
             March 6th-7th 2020
           </p>
-          <Button as={Link}>Register</Button>
+          <Button as={Link} to="/register">
+            Register
+          </Button>
         </Content>
         <CustomImg src={homeHead} alt="HomeHead"></CustomImg>
       </Section>
@@ -37,7 +40,9 @@ export default function MainHome() {
             Higher School of Computer Science ESI ex INI<br></br>
             March 6th-7th 2020
           </p>
-          <Button>View full details</Button>
+          <Button as={Link} to="/about">
+            View full details
+          </Button>
         </Content>
       </Section2>
       <Section3>
@@ -69,6 +74,24 @@ export default function MainHome() {
           </TrackItem>
         </Tracks>
       </Section3>
+      <Section4>
+        <Title style={{ color: "white" }}>SOME NUMBERS</Title>
+        <h5 style={{ color: "white" }}>Our history with IWD </h5>
+        <ul>
+          <li>
+            <Record record={3} title="Editions" />
+          </li>
+          <li>
+            <Record record={290} title="Happy participants" />
+          </li>
+          <li>
+            <Record record={350} title="Registrations" />
+          </li>
+        </ul>
+      </Section4>
+      <Section5>
+        <Title style={{ color: "white" }}>OUR PARTNERS</Title>
+      </Section5>
     </Wrapper>
   )
 }
@@ -77,6 +100,11 @@ export default function MainHome() {
 
 /// Section  component
 const Section = styled.div`
+  h1,
+  h2,
+  h3 {
+    font-weight: 600;
+  }
   padding: 1rem;
   width: 100%;
   min-height: 33%;
@@ -132,6 +160,44 @@ const Section2 = styled(Section)`
 /// Section 3
 const Section3 = styled(Section2)`
   flex-direction: column;
+`
+/// Section 4
+const Section4 = styled(Section3)`
+  margin-top: 0;
+  background-color: rgb(54, 49, 158);
+  * {
+    font-weight: 500;
+  }
+  h1 {
+    margin-top: 2%;
+  }
+  ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    list-style-type: none;
+    li {
+      width: 20%;
+      padding: 4em 2em;
+      border: 3px solid white;
+      border-radius: 25%;
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      li {
+        width: 50%;
+      }
+    }
+  }
+`
+const Section5 = styled(Section3)`
+  margin-top: 0;
+  background-color: rgb(164, 100, 252);
+  height: 20vh;
 `
 
 const Tracks = styled.ul`
