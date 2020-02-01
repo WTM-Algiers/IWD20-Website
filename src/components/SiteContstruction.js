@@ -38,6 +38,20 @@ const Container = styled.div`
     margin: 0 10%;
     text-align: center;
   }
+  @media screen and (max-width: 768px) {
+    img {
+      width: 60%;
+    }
+    h1 {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 568px) {
+    img {
+      width: 50%;
+    }
+    font-size: 1em;
+  }
 `
 const Button = styled.button`
   padding: 1rem;
