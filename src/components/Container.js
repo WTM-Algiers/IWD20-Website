@@ -7,4 +7,12 @@ const Container = styled.div`
   width: 100%;
   height: 80vh;
 `
+const MainWrapper = styled(Container)`
+  height: auto;
+  min-height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`
 export default Container
+export { MainWrapper }

@@ -2,15 +2,30 @@ import React from "react"
 import NavBar from "./navbar"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import logo from "../../images/logo.svg"
 //TODO : Add navigation bar with iwd logo , and links to other pages // *
 // * Add Pages are : (Home About Contact Us Agenda Register )in this order
 // * Add styles to styles folder
 const Header = () => (
   <StyledHeader>
     <Link to="/">
-      <StyledLogo src={require("../../images/iwd.png")}></StyledLogo>{" "}
+      <StyledLogo src={logo}></StyledLogo>{" "}
     </Link>
-    <h1>International Women's Day 2020</h1>
+    <h1
+      style={{
+        color: "#00BFA5",
+        fontWeight: 400,
+      }}
+    >
+      International Women's Day{" "}
+      <span
+        style={{
+          color: "#4285F4",
+        }}
+      >
+        2020
+      </span>
+    </h1>
     <NavBar></NavBar>
   </StyledHeader>
 )
@@ -20,10 +35,10 @@ const StyledHeader = styled.header`
   width: 100%;
   position: fixed;
   justify-content: flex-start;
-  background-color: #eeeff1;
+  background-color: rgba(253, 253, 253, 1);
 
   align-items: center;
-  box-shadow: 2px 7px 17px -10px rgba(229, 128, 175, 0.5);
+  box-shadow: 2px 7px 17px -10px rgba(0, 0, 0, 0.1);
   z-index: 999;
   h1 {
     margin-bottom: 0;

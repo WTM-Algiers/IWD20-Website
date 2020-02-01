@@ -4,11 +4,11 @@ import Layout from "../components/layout/layout"
 
 import SEO from "../components/seo"
 
-import MainConstruction from "../components/layout/MainConstruction"
+import Main from "../components/Mains/MainHome"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <MainConstruction title="Home"></MainConstruction>
+    <Main></Main>
   </Layout>
 )
 

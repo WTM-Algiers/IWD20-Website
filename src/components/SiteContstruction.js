@@ -32,7 +32,7 @@ const Container = styled.div`
     width: 20em;
   }
   h1 {
-    color: rgba(229, 128, 175, 1);
+    color: #00bfa5;
     font-size: 2em;
     font-weight: 500;
     margin: 0 10%;
