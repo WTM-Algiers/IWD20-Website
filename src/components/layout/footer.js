@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SocialMedia from "../SocialMedia"
+import send from "../../images/icons/next.svg"
 // TODO : ADD about us
 // TODO : ADD sign up to newsletter
 // TODO : Add social media links
@@ -20,12 +21,15 @@ export default function footer() {
         <p>Stay up to date with our latest trends 📧</p>
         <Input>
           <input></input>
-          <SendBtn>></SendBtn>
+          <SendBtn>
+            <img src={send} alt="send"></img>
+          </SendBtn>
         </Input>
       </Container>
       <Container>
         <Title>Social Media</Title>
         <p>Lets stay social 😉</p>
+        <SocialMedia></SocialMedia>
       </Container>
     </StyledFooter>
   )
@@ -100,4 +104,8 @@ const SendBtn = styled.button`
   padding: 2px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  img {
+    width: 10px;
+    margin: auto;
+  }
 `
