@@ -75,8 +75,6 @@ export default function MainHome() {
         </Tracks>
       </Section3>
       <Section4>
-        <Title style={{ color: "white" }}>SOME NUMBERS</Title>
-        <h5 style={{ color: "white" }}>Our history with IWD </h5>
         <ul>
           <li>
             <Record record={3} title="Editions" />
@@ -174,15 +172,13 @@ const Section4 = styled(Section3)`
   ul {
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 80%;
     list-style-type: none;
     li {
       width: 20%;
       padding: 4em 2em;
-      border: 3px solid white;
-      border-radius: 25%;
       text-align: center;
     }
     @media screen and (max-width: 768px) {

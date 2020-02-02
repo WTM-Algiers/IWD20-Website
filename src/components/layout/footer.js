@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import SocialMedia from "../SocialMedia"
 import send from "../../images/icons/next.svg"
 // TODO : ADD about us
 // TODO : ADD sign up to newsletter
 // TODO : Add social media links
-export default function footer() {
+export default function Footer() {
+  const [newsletterEmail, setNewsLetterEmail] = useState("")
+  const SaveEmail = () => {
+    //TODO : Define Saving newsletter login using Google Sheets Api
+    alert("Thank you for registering this email " + newsletterEmail)
+  }
   return (
     <StyledFooter>
       <Container>
@@ -20,8 +25,14 @@ export default function footer() {
         <Title>Newsletter</Title>
         <p>Stay up to date with our latest trends 📧</p>
         <Input>
-          <input></input>
-          <SendBtn>
+          <input
+            name="email"
+            type="email"
+            placeholder="example@example.com"
+            value={newsletterEmail}
+            onChange={e => setNewsLetterEmail(e.target.value)}
+          ></input>
+          <SendBtn onClick={e => SaveEmail()}>
             <img src={send} alt="send"></img>
           </SendBtn>
         </Input>
@@ -81,18 +92,20 @@ const Title = styled.h2`
 `
 
 const Input = styled.div`
-  width: 70%;
+  width: 100%;
   input {
     width: 80%;
     height: 50%;
     border: 2px solid #2bc9b4;
     font-family: sans-serif;
-    padding: 2px;
+    padding: 4px;
     border-top-left-radius: 5px;
+    border-right-color: transparent;
     border-bottom-left-radius: 5px;
   }
   @media screen and (max-width: 768px) {
     margin: auto;
+    width: 70%;
   }
 `
 const SendBtn = styled.button`
@@ -101,7 +114,7 @@ const SendBtn = styled.button`
   background: #584ffa;
   height: 50%;
   border: 0px solid rgb(83, 144, 245);
-  padding: 2px;
+  padding: 4px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   img {
