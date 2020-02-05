@@ -1,26 +1,39 @@
 import React from "react"
-
 import styled from "styled-components"
 import facebook from "../images/icons/facebook.svg"
 import website from "../images/icons/website.svg"
 import twitter from "../images/icons/twitter.svg"
 import linkedin from "../images/icons/linkedin.svg"
+const links = [
+  {
+    url: "#",
+    icon: facebook,
+    alt: "facebook icon",
+  },
+  {
+    url: "#",
+    icon: twitter,
+    alt: "twitter icon",
+  },
+  {
+    url: "#",
+    icon: linkedin,
+    alt: "linkedin icon",
+  },
+  {
+    url: "#",
+    icon: website,
+    alt: "website icon",
+  },
+]
 const SocialMedia = () => {
   return (
     <Container>
-      <Link href="#">
-        {" "}
-        <img src={facebook}></img>
-      </Link>
-      <Link href="#">
-        <img src={twitter}></img>
-      </Link>
-      <Link href="#">
-        <img src={linkedin}></img>
-      </Link>
-      <Link href="#">
-        <img src={website}></img>
-      </Link>
+      {links.map(link => (
+        <Link href={link.url} target="_blank">
+          <Icon src={link.icon} alt={link.alt}></Icon>
+        </Link>
+      ))}
     </Container>
   )
 }
@@ -29,27 +42,30 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: fit-content;
+  width: 70%;
   a {
     padding: 0;
   }
   @media screen and (max-width: 768px) {
     justify-content: center;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
 `
 const Link = styled.a`
-  img {
-    max-width: 50%;
-    width: 50%;
-    opacity: 0.5;
-    transition: 0.5s ease;
-    &:hover {
-      opacity: 1;
-    }
-    @media screen and (max-width: 768px) {
-      margin-top: 1.45rem;
-    }
+  max-width: 25%;
+`
+const Icon = styled.img`
+  margin-bottom: 0;
+  width: 70%;
+  max-width: 70px;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 1.45rem;
   }
 `
 

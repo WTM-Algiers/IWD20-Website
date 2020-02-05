@@ -18,12 +18,21 @@ export default function Footer() {
         <p>Some details about WTM </p>
         <p>Some details about GDG</p>
         <Copyrights>
-          This website was built with ❤️ from WTM Algiers team Ⓒ2020{" "}
+          This website was built with{" "}
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>{" "}
+          from WTM Algiers team Ⓒ2020{" "}
         </Copyrights>
       </Container>
       <Container>
         <Title>Newsletter</Title>
-        <p>Stay up to date with our latest trends 📧</p>
+        <p>
+          Stay up to date with our latest trends{" "}
+          <span role="img" aria-label="email">
+            📧
+          </span>
+        </p>
         <Input>
           <input
             name="email"
@@ -39,17 +48,18 @@ export default function Footer() {
       </Container>
       <Container>
         <Title>Social Media</Title>
-        <p>Lets stay social 😉</p>
+        <p>
+          Lets stay social{" "}
+          <span role="img" aria-label="winky face">
+            😉
+          </span>
+        </p>
         <SocialMedia></SocialMedia>
       </Container>
     </StyledFooter>
   )
 }
 //* Styled Components
-const FooterContainer = styled.div`
-  text-align: center;
-  height: 100%;
-`
 const Copyrights = styled.p`
   font-family: sans-serif;
   font-size: 1rem;

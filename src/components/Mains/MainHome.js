@@ -75,7 +75,7 @@ export default function MainHome() {
         </Tracks>
       </Section3>
       <Section4>
-        <ul>
+        <ul style={{ margin: 0 }}>
           <li>
             <Record record={3} title="Editions" />
           </li>
