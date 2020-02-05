@@ -2,9 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import SocialMedia from "../SocialMedia"
 import send from "../../images/icons/next.svg"
-// TODO : ADD about us
-// TODO : ADD sign up to newsletter
-// TODO : Add social media links
+
 export default function Footer() {
   const [newsletterEmail, setNewsLetterEmail] = useState("")
   const SaveEmail = () => {

@@ -2,8 +2,6 @@ import React from "react"
 import Layout from "../components/layout/baseLayout"
 import SEO from "../components/seo"
 
-// TODO : Implement the Page
-// TODO : Add Typeforms integration
 import { ReactTypeformEmbed } from "react-typeform-embed"
 
 export default function register() {

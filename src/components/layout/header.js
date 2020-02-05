@@ -3,9 +3,7 @@ import NavBar from "./navbar"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
-//TODO : Add navigation bar with iwd logo , and links to other pages // *
-// * Add Pages are : (Home About Contact Us Agenda Register )in this order
-// * Add styles to styles folder
+
 const Header = () => (
   <StyledHeader>
     <Link to="/">
@@ -43,7 +41,7 @@ const StyledHeader = styled.header`
   h1 {
     margin-bottom: 0;
     margin-left: 1%;
-    font-family: Roboto;
+    font-family: "Roboto" sans-serif;
     font-size: 150%;
     color: rgba(133, 8, 133, 0.5);
     font-weight: 500;

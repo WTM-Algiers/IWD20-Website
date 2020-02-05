@@ -5,13 +5,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 `
 const MainWrapper = styled(Container)`
   height: auto;
-  min-height: 80vh;
+  min-height: 90vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 `
 export default Container
