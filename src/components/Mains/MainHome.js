@@ -162,7 +162,14 @@ const Section3 = styled(Section2)`
 /// Section 4
 const Section4 = styled(Section3)`
   margin-top: 0;
-  background-color: rgb(54, 49, 158);
+  background-image: linear-gradient(
+    to right bottom,
+    #4285f4,
+    #3672dc,
+    #295fc5,
+    #1a4dae,
+    #043c98
+  );
   * {
     font-weight: 500;
   }
@@ -185,15 +192,22 @@ const Section4 = styled(Section3)`
       flex-direction: column;
       width: 100%;
       li {
-        width: 50%;
+        width: 90%;
       }
     }
   }
 `
 const Section5 = styled(Section3)`
   margin-top: 0;
-  background-color: rgb(164, 100, 252);
-  height: 20vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #1ce9b6,
+    #00d8db,
+    #00c2fa,
+    #00a7ff,
+    #4285f4
+  );
+  height: 40vh;
 `
 
 const Tracks = styled.ul`

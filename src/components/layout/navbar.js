@@ -47,7 +47,14 @@ const StyledNavbar = styled.nav`
       border-bottom: 2px solid #4285f4;
       &#register {
         color: white;
-        background-color: #584ffa;
+        background-image: linear-gradient(
+          to right top,
+          #1ce9b6,
+          #00d8db,
+          #00c2fa,
+          #00a7ff,
+          #4285f4
+        );
         padding: 10px 20px;
         border-radius: 5px;
         border-bottom: none;

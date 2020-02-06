@@ -4,7 +4,15 @@
 }
 .register-active {
   color: white !important;
-  background-color: #584ffa !important;
+  background-image: linear-gradient(
+    to right top,
+    #1ce9b6,
+    #00d8db,
+    #00c2fa,
+    #00a7ff,
+    #4285f4
+  ) !important;
   padding: 10px 20px !important;
   border-radius: 5px;
+  border-bottom: none !important;
 }
