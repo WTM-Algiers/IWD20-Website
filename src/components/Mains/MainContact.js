@@ -1,7 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { MainWrapper as Wrapper } from "../Container"
 import ContactInfo from "../ContactInfo"
+import ContactFrom from "../ContactFrom"
 /// svgs :
 import call from "../../images/icons/call.svg"
 import email from "../../images/icons/email.svg"
@@ -27,26 +28,24 @@ export default function MainContact() {
           <ContactInfo
             contact={{
               icon: home,
-              main: "ESI , OuedSmar algiers",
+              main: "ESI , Ouedsmar algiers",
               snd: "Come visit anytime",
             }}
           ></ContactInfo>
           <ContactInfo
             contact={{
               icon: email,
-              main: "Or hit us on email",
-              snd: "send us a letter",
+              main: "wtm-algiers@esi.dz",
+              snd: "send us an email",
             }}
           ></ContactInfo>
         </Contacts>
-        <div style={{ width: "100%" }}>
-          <h2 style={{ textAlign: "center" }}>Contact Form...</h2>
-        </div>
+        <ContactFrom></ContactFrom>
       </Contact>
 
-      <Location>
+      <Position>
         <Title>Where Are we ?</Title>
-      </Location>
+      </Position>
       <GoogleMaps>
         <Title>Google Maps API</Title>
       </GoogleMaps>
@@ -73,18 +72,20 @@ const Title = styled.h1`
 `
 const GoogleMaps = styled(Section)`
   background: grey;
+  flex-direction: column;
+  justify-content: space-around;
   min-height: 70vh;
 `
-const Location = styled(Landing)`
+const Position = styled(Landing)`
   background: #3f3d56;
 `
 const Contact = styled.section`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   width: 80%;
   margin: auto;
-  min-height: 70vh;
+  min-height: 50vh;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-top: 5%;
@@ -100,7 +101,7 @@ const Contacts = styled.div`
   @media screen and (max-width: 768px) {
     width: 80%;
     margin: 0 auto;
-    justify-content: center;
-    height: 50%;
+    justify-content: space-around;
+    height: 52vh;
   }
 `

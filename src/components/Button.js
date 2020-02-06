@@ -7,9 +7,10 @@ const Button = styled.button`
   color: white;
   border: 1px solid #6c63ff;
   transition: 0.5s ease-out;
+  cursor: pointer;
   border-radius: 3px;
   &:focus {
-    outline-color: rgba(29, 233, 182, 1);
+    outline-color: white;
     border-color: white;
   }
   &:hover {
