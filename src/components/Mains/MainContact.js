@@ -18,7 +18,7 @@ export default function MainContact() {
       <Landing>
         <Title>
           WTM Algiers Contacts
-          <span role="img" aria-label="chat">
+          <span role="img" aria-label="chat" className="emoji">
             💬
           </span>
         </Title>
@@ -56,7 +56,7 @@ export default function MainContact() {
       <Position>
         <Title>
           Where are we
-          <span role="img" aria-label="red pin">
+          <span role="img" aria-label="red pin" className="emoji">
             📌
           </span>
         </Title>
@@ -91,6 +91,11 @@ const Title = styled.h1`
   color: white;
   font-weight: 400;
   margin: 0 5%;
+  @media screen and (max-width: 768px) {
+    .emoji {
+      display: block;
+    }
+  }
 `
 const GoogleMaps = styled(Section)`
   flex-direction: column;

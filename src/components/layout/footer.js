@@ -48,7 +48,12 @@ export default function Footer() {
             📧
           </span>
         </p>
-        <form name="newsletter" method="POST" onSubmit={handleSubmit}>
+        <form
+          name="newsletter"
+          method="POST"
+          onSubmit={handleSubmit}
+          data-netlify={true}
+        >
           <Input>
             <input
               name="email"

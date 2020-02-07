@@ -3,21 +3,22 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import commonStyle from "../../styles/common.module.css"
 const links = [
-  <Link to="/" activeClassName={commonStyle.linkActive}>
+  <Link to="/" activeClassName={commonStyle.linkActive} rel="noopener">
     Home
   </Link>,
-  <Link to="/about" activeClassName={commonStyle.linkActive}>
+  <Link to="/about" activeClassName={commonStyle.linkActive} rel="noopener">
     About
   </Link>,
-  <Link to="/agenda" activeClassName={commonStyle.linkActive}>
+  <Link to="/agenda" activeClassName={commonStyle.linkActive} rel="noopener">
     Agenda
   </Link>,
-  <Link to="/contact" activeClassName={commonStyle.linkActive}>
+  <Link to="/contact" activeClassName={commonStyle.linkActive} rel="noopener">
     Contact Us
   </Link>,
   <Link
     to="/register"
     id="register"
+    rel="noopener"
     activeClassName={commonStyle.registerActive}
   >
     Register

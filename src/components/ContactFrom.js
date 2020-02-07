@@ -181,7 +181,8 @@ const CustomButton = styled(Button)`
     align-items: center;
 
     img {
-      transition: 0.1s ease-in-out;
+      display: none;
+      transition: 0.9s ease-in-out;
       margin: 0;
       margin-left: 10px;
       width: 0px;
@@ -190,6 +191,7 @@ const CustomButton = styled(Button)`
   &:hover {
     .ctn-btn img {
       width: 30px;
+      display: block;
     }
   }
 `
