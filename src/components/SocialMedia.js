@@ -6,22 +6,22 @@ import twitter from "../images/icons/twitter.svg"
 import linkedin from "../images/icons/linkedin.svg"
 const links = [
   {
-    url: "#",
+    url: "https://www.facebook.com/WomenTechmakersAlgiers/",
     icon: facebook,
     alt: "facebook icon",
   },
   {
-    url: "#",
+    url: "https://twitter.com/AlgiersWTM",
     icon: twitter,
     alt: "twitter icon",
   },
   {
-    url: "#",
+    url: "https://www.linkedin.com/company/wtm-algiers/",
     icon: linkedin,
     alt: "linkedin icon",
   },
   {
-    url: "#",
+    url: "https://www.wtm-algiers.tech/",
     icon: website,
     alt: "website icon",
   },
@@ -29,8 +29,8 @@ const links = [
 const SocialMedia = () => {
   return (
     <Container>
-      {links.map(link => (
-        <Link href={link.url} target="_blank">
+      {links.map((link, index) => (
+        <Link href={link.url} target="_blank" key={index}>
           <Icon src={link.icon} alt={link.alt}></Icon>
         </Link>
       ))}

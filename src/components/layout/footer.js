@@ -2,12 +2,29 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import SocialMedia from "../SocialMedia"
 import send from "../../images/icons/next.svg"
-
+import { encode } from "../ContactFrom"
 export default function Footer() {
-  const [newsletterEmail, setNewsLetterEmail] = useState("")
-  const SaveEmail = () => {
-    //TODO : Define Saving newsletter login using Google Sheets Api
-    alert("Thank you for registering this email " + newsletterEmail)
+  const [state, setState] = useState({})
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => SavedEmail())
+      .catch(error => alert(error))
+  }
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+  const SavedEmail = () => {
+    alert("Thank you for registering this email " + state.email)
   }
   return (
     <StyledFooter>
@@ -31,18 +48,19 @@ export default function Footer() {
             📧
           </span>
         </p>
-        <Input>
-          <input
-            name="email"
-            type="email"
-            placeholder="example@example.com"
-            value={newsletterEmail}
-            onChange={e => setNewsLetterEmail(e.target.value)}
-          ></input>
-          <SendBtn onClick={e => SaveEmail()}>
+        <form name="newsletter" method="POST" onSubmit={handleSubmit}>
+          <Input>
+            <input
+              name="email"
+              type="email"
+              placeholder="example@example.com"
+              onChange={handleChange}
+            ></input>
+          </Input>
+          <SendBtn type="submit">
             <img src={send} alt="send"></img>
           </SendBtn>
-        </Input>
+        </form>
       </Container>
       <Container>
         <Title>Social Media</Title>
@@ -72,7 +90,14 @@ const StyledFooter = styled.footer`
   width: 100%;
   min-height: 10vh;
   padding: 20px 0;
-  background-color: #3f3d56;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #17213f,
+    #252a46,
+    #32334e,
+    #3f3d56
+  );
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -92,6 +117,14 @@ const Container = styled.div`
     width: 100%;
     margin: 5% 0;
   }
+  form {
+    display: inline;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      width: 70%;
+      margin: 5% 0;
+    }
+  }
 `
 const Title = styled.h2`
   font-family: sans-serif;
@@ -100,9 +133,9 @@ const Title = styled.h2`
 `
 
 const Input = styled.div`
-  width: 100%;
+  display: inline-block;
   input {
-    width: 80%;
+    width: 100%;
     height: 50%;
     border: 2px solid #2bc9b4;
     font-family: sans-serif;

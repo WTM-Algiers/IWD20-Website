@@ -4,7 +4,7 @@ import styled from "styled-components"
 export default function ContactInfo({ contact }) {
   return (
     <Container>
-      <Icon src={contact.icon}></Icon>
+      <Icon src={contact.icon} alt={contact.alt}></Icon>
       <Content>
         <h5>{contact.main}</h5>
         <h6>{contact.snd}</h6>

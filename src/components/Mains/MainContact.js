@@ -1,8 +1,10 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { MainWrapper as Wrapper } from "../Container"
 import ContactInfo from "../ContactInfo"
 import ContactFrom from "../ContactFrom"
+import Location from "../Location"
+
 /// svgs :
 import call from "../../images/icons/call.svg"
 import email from "../../images/icons/email.svg"
@@ -14,13 +16,19 @@ export default function MainContact() {
   return (
     <Wrapper>
       <Landing>
-        <Title>WTM Algiers Contacts</Title>
+        <Title>
+          WTM Algiers Contacts
+          <span role="img" aria-label="chat">
+            💬
+          </span>
+        </Title>
       </Landing>
       <Contact>
         <Contacts>
           <ContactInfo
             contact={{
               icon: call,
+              alt: "call",
               main: "+21315513514",
               snd: "Call us anytime we will surely answer",
             }}
@@ -28,6 +36,7 @@ export default function MainContact() {
           <ContactInfo
             contact={{
               icon: home,
+              alt: "home",
               main: "ESI , Ouedsmar algiers",
               snd: "Come visit anytime",
             }}
@@ -35,6 +44,7 @@ export default function MainContact() {
           <ContactInfo
             contact={{
               icon: email,
+              alt: "email",
               main: "wtm-algiers@esi.dz",
               snd: "send us an email",
             }}
@@ -44,10 +54,15 @@ export default function MainContact() {
       </Contact>
 
       <Position>
-        <Title>Where Are we ?</Title>
+        <Title>
+          Where are we
+          <span role="img" aria-label="red pin">
+            📌
+          </span>
+        </Title>
       </Position>
       <GoogleMaps>
-        <Title>Google Maps API</Title>
+        <Location></Location>
       </GoogleMaps>
     </Wrapper>
   )
@@ -61,7 +76,14 @@ const Section = styled.section`
 `
 const Landing = styled(Section)`
   text-align: center;
-  background: #3f3d56;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #17213f,
+    #252a46,
+    #32334e,
+    #3f3d56
+  );
   min-height: 30vh;
 `
 const Title = styled.h1`
@@ -71,13 +93,19 @@ const Title = styled.h1`
   margin: 0 5%;
 `
 const GoogleMaps = styled(Section)`
-  background: grey;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 70vh;
+  height: 70vh;
 `
 const Position = styled(Landing)`
-  background: #3f3d56;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #17213f,
+    #252a46,
+    #32334e,
+    #3f3d56
+  );
 `
 const Contact = styled.section`
   display: flex;

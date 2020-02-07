@@ -113,6 +113,7 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     justify-content: center;
+    height: 90vh;
     align-items: center;
   }
 `
@@ -153,11 +154,18 @@ const Section2 = styled(Section)`
   justify-content: space-around;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    height: 90vh;
   }
 `
 /// Section 3
 const Section3 = styled(Section2)`
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    min-height: 90vh;
+    height: auto;
+  }
 `
 /// Section 4
 const Section4 = styled(Section3)`

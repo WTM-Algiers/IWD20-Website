@@ -2,17 +2,58 @@ import styled, { css } from "styled-components"
 import React from "react"
 import send from "../images/icons/send.svg"
 import Button from "./Button"
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 const ContactForm = () => {
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => alert("Thank you for sending 😄"))
+      .catch(error => alert(error))
+  }
   return (
-    <Form name="contact" method="POST" data-netlify={true}>
+    <Form
+      name="contact"
+      method="POST"
+      data-netlify={true}
+      onSubmit={handleSubmit}
+    >
       <div className="inputs">
         <div className="form-group">
           <Label for="fname">First Name</Label>
-          <Input name="fname" type="text" placeholder="ex: Mohammad"></Input>
+          <Input
+            name="fname"
+            type="text"
+            placeholder="ex: Mohammad"
+            onChange={handleChange}
+          ></Input>
         </div>
         <div className="form-group">
           <Label for="lname">Last Name</Label>
-          <Input name="lname" type="text" placeholder="ex: Habib"></Input>
+          <Input
+            name="lname"
+            type="text"
+            placeholder="ex: Habib"
+            onChange={handleChange}
+          ></Input>
         </div>
         <div className="form-group">
           <Label for="email">Your email</Label>
@@ -20,17 +61,16 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="ex: mohammad@wtm.dz "
+            onChange={handleChange}
           ></Input>
         </div>
       </div>
-      <TextArea placeholder="Your beautiful message..."></TextArea>
-      <CustomButton
-        type="submit"
-        onClick={e => {
-          e.preventDefault()
-          alert("Thank you for sending 😄")
-        }}
-      >
+      <TextArea
+        name="message"
+        placeholder="Your beautiful message..."
+        onChange={handleChange}
+      ></TextArea>
+      <CustomButton type="submit">
         <div class="ctn-btn">
           <span>Send</span>
           <img src={send} alt="send icon" />
@@ -154,3 +194,4 @@ const CustomButton = styled(Button)`
   }
 `
 export default ContactForm
+export { encode }
