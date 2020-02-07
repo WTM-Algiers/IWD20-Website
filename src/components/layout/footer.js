@@ -139,7 +139,7 @@ const Input = styled.div`
     height: 50%;
     border: 2px solid #2bc9b4;
     font-family: sans-serif;
-    padding: 4px;
+    padding: 10px;
     border-top-left-radius: 5px;
     border-right-color: transparent;
     border-bottom-left-radius: 5px;
@@ -155,7 +155,7 @@ const SendBtn = styled.button`
   background: #584ffa;
   height: 50%;
   border: 0px solid rgb(83, 144, 245);
-  padding: 4px;
+  padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   img {
