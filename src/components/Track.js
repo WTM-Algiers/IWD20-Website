@@ -30,6 +30,8 @@ const Container = styled.div`
     margin: 0 auto;
   }
 `
-const Logo = styled.img``
+const Logo = styled.img`
+  width: 14%;
+`
 
 const Content = styled.div``

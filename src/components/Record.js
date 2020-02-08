@@ -12,14 +12,14 @@ const Record = ({ record, title }) => {
 }
 export default Record
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   color: white;
   font-family: sans-serif;
-  h3 h4 {
-    text-align: center;
-    margin-bottom: 10px;
+  h3 {
+    font-size: 32pt;
+    margin-bottom: 8px;
+  }
+  h4{
+    font-weight: 300;
   }
 `

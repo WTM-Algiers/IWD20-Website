@@ -32,13 +32,14 @@ export default function MainHome() {
         <CustomImg src={homeHead} alt="HomeHead"></CustomImg>
       </Section>
       <Section2>
-        <CustomImg src={homeAbout} alt="HomeHead"></CustomImg>
+        <CustomImg2 src={homeAbout} alt="HomeHead"></CustomImg2>
         <Content>
           <h5>ABOUT THE EVENT</h5>
           <Title>International Women's Day 2020</Title>
           <p>
-            Higher School of Computer Science ESI ex INI<br></br>
-            March 6th-7th 2020
+            International Women’s Day (IWD) is marked on March 8th every year. In different regions, the focus 
+            of celebrations ranges from general respect and appreciation for women to a celebration of women’s 
+            economic, political, and social achievements.
           </p>
           <Button as={Link} to="/about">
             View full details
@@ -75,17 +76,9 @@ export default function MainHome() {
         </Tracks>
       </Section3>
       <Section4>
-        <ul style={{ margin: 0 }}>
-          <li>
             <Record record={3} title="Editions" />
-          </li>
-          <li>
             <Record record={290} title="Happy participants" />
-          </li>
-          <li>
             <Record record={350} title="Registrations" />
-          </li>
-        </ul>
       </Section4>
       <Section5>
         <Title style={{ color: "white" }}>OUR PARTNERS</Title>
@@ -103,11 +96,12 @@ const Section = styled.div`
   h3 {
     font-weight: 600;
   }
-  padding: 1rem;
+  padding:  0px 64px;
   width: 100%;
   min-height: 33%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(240, 240, 240, 0.5);
   @media screen and (max-width: 768px) {
@@ -120,6 +114,7 @@ const Section = styled.div`
 const Content = styled.div`
   font-family: sans-serif;
   display: flex;
+  width: 40%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -135,8 +130,21 @@ const Content = styled.div`
   }
 `
 const CustomImg = styled.img`
-  width: 30%;
+  width: 50%;
   margin-left: 5%;
+  @media screen and (max-width: 1222px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    margin: 0;
+    margin-bottom: 10%;
+    margin-right: 10%;
+  }
+`
+
+const CustomImg2 = styled.img`
+  width: 40%;
   @media screen and (max-width: 1222px) {
     width: 40%;
   }
@@ -149,9 +157,8 @@ const CustomImg = styled.img`
 `
 /// Section 2
 const Section2 = styled(Section)`
-  margin-top: 5%;
   background-color: #fff;
-  justify-content: space-around;
+  justify-content: space-between;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     height: 90vh;
@@ -160,7 +167,8 @@ const Section2 = styled(Section)`
 /// Section 3
 const Section3 = styled(Section2)`
   flex-direction: column;
-
+  height: auto;
+  padding: 48px 6px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     min-height: 90vh;
@@ -169,7 +177,9 @@ const Section3 = styled(Section2)`
 `
 /// Section 4
 const Section4 = styled(Section3)`
-  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-image: linear-gradient(
     to right bottom,
     #4285f4,
@@ -178,31 +188,9 @@ const Section4 = styled(Section3)`
     #1a4dae,
     #043c98
   );
-  * {
-    font-weight: 500;
-  }
   h1 {
     margin-top: 2%;
-  }
-  ul {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80%;
-    list-style-type: none;
-    li {
-      width: 20%;
-      padding: 4em 2em;
-      text-align: center;
-    }
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      width: 100%;
-      li {
-        width: 90%;
-      }
-    }
+    font-weight: 500;
   }
 `
 const Section5 = styled(Section3)`

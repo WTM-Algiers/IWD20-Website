@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Button = styled.button`
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.8rem;
   font-family: sans-serif;
   background-color: #6c63ff;
   color: white;
