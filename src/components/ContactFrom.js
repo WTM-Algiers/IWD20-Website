@@ -38,44 +38,38 @@ const ContactForm = () => {
     >
       <div className="inputs">
         <div className="form-group">
-          <Label for="fname">First Name</Label>
           <Input
             name="fname"
             type="text"
-            placeholder="ex: Mohammad"
+            placeholder="Enter your name"
             onChange={handleChange}
           ></Input>
         </div>
+        
         <div className="form-group">
-          <Label for="lname">Last Name</Label>
-          <Input
-            name="lname"
-            type="text"
-            placeholder="ex: Habib"
-            onChange={handleChange}
-          ></Input>
-        </div>
-        <div className="form-group">
-          <Label for="email">Your email</Label>
           <Input
             name="email"
             type="email"
-            placeholder="ex: mohammad@wtm.dz "
+            placeholder="Enter email address"
+            onChange={handleChange}
+          ></Input>
+        </div>
+
+        <div className="form-group">
+          <Input
+            name="lname"
+            type="text"
+            placeholder="Enter subject"
             onChange={handleChange}
           ></Input>
         </div>
       </div>
       <TextArea
         name="message"
-        placeholder="Your beautiful message..."
+        placeholder="Enter Message ..."
         onChange={handleChange}
       ></TextArea>
-      <CustomButton type="submit">
-        <div class="ctn-btn">
-          <span>Send</span>
-          <img src={send} alt="send icon" />
-        </div>
-      </CustomButton>
+      <Button type="submit"> Send Message </Button>
     </Form>
   )
 }
@@ -121,8 +115,8 @@ const Form = styled.form`
 `
 
 const border = css`
-  border: 2px solid #5047f8;
-  border-radius: 5px;
+  border: 1.4px solid #5047f8;
+  border-radius: 0px;
   outline: none;
 `
 const transition = css`
@@ -140,20 +134,25 @@ const focusEffect = css`
     border: 2px solid #5047f8;
   }
 `
+
 const Label = styled.label`
   display: block;
   font-family: inherit;
 `
 const Input = styled.input`
   opacity : 0.6;
-  padding : 10px;
+  padding : 10px 16px;
   ${border}
   ${transition}
   ${hoverEffect}
   ${focusEffect}
   width: 80%;
+  margin-bottom: 16px;
   color: inherit;
   font-family : inherit;
+  ::placeholder{
+    font-size: 14px;
+  }
   @media screen and (max-width: 768px) {
     width: 90%;
   }
@@ -161,14 +160,18 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   opacity : 0.6;
   width: 50%;
-  height: 100%;
+  height: 78%;
+  margin-top: -20px;
   min-height: 20vh;
-  padding : 10px;
+  padding : 10px 16px;
   font-family : inherit;
   ${border}
   ${transition}
   ${hoverEffect}
   ${focusEffect}
+  ::placeholder{
+    font-size: 14px;
+  }
   @media screen and (max-width: 768px) {
     width: 80%;
   }

@@ -18,11 +18,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2% 0;
+  margin: 18px 0px;
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
 `
+
 const Content = styled.div`
   h5,
   h6 {

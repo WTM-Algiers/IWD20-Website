@@ -18,9 +18,9 @@ export default function MainContact() {
       <Landing>
         <Title>
           WTM Algiers Contacts
-          <span role="img" aria-label="chat" className="emoji">
+          {/*<span role="img" aria-label="chat" className="emoji">
             💬
-          </span>
+          </span>*/}
         </Title>
       </Landing>
       <Contact>
@@ -29,7 +29,7 @@ export default function MainContact() {
             contact={{
               icon: call,
               alt: "call",
-              main: "+21315513514",
+              main: "+213 15 51 35 14",
               snd: "Call us anytime we will surely answer",
             }}
           ></ContactInfo>
@@ -53,14 +53,14 @@ export default function MainContact() {
         <ContactFrom></ContactFrom>
       </Contact>
 
-      <Position>
+      {/*<Position>
         <Title>
           Where are we
           <span role="img" aria-label="red pin" className="emoji">
             📌
           </span>
         </Title>
-      </Position>
+      </Position>*/}
       <GoogleMaps>
         <Location></Location>
       </GoogleMaps>
@@ -84,7 +84,7 @@ const Landing = styled(Section)`
     #32334e,
     #3f3d56
   );
-  min-height: 30vh;
+  min-height: 40vh;
 `
 const Title = styled.h1`
   font-family: sans-serif;
@@ -113,12 +113,10 @@ const Position = styled(Landing)`
   );
 `
 const Contact = styled.section`
+  padding: 64px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  margin: auto;
-  min-height: 50vh;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-top: 5%;
@@ -126,8 +124,6 @@ const Contact = styled.section`
 `
 const Contacts = styled.div`
   display: flex;
-  height: 100%;
-  width: 35%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
