@@ -30,7 +30,7 @@ const SocialMedia = () => {
   return (
     <Container>
       {links.map((link, index) => (
-        <Link href={link.url} target="_blank" key={index}>
+        <Link href={link.url} target="_blank" key={index} rel="noopener">
           <Icon src={link.icon} alt={link.alt}></Icon>
         </Link>
       ))}
