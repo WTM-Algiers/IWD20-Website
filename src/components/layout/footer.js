@@ -24,7 +24,7 @@ export default function Footer() {
     setState({ ...state, [e.target.name]: e.target.value })
   }
   const SavedEmail = () => {
-    alert("Thank you for registering this email " + state.email)
+    alert("Thank you for registering this email 😉" + state.email)
   }
   return (
     <StyledFooter>
