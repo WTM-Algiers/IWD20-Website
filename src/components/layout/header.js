@@ -43,7 +43,7 @@ const StyledHeader = styled.header`
     margin-bottom: 0;
     margin-left: 1%;
     font-family: "Roboto" sans-serif;
-    font-size: 150%;
+    font-size: 18pt;
     color: rgba(133, 8, 133, 0.5);
     font-weight: 500;
     @media screen and (max-width: 768px) {

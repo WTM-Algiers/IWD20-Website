@@ -30,14 +30,14 @@ export default function Navbar() {
 const StyledNavbar = styled.nav`
   display: flex;
   margin-left: auto;
-  width: 50%;
+  width: 40%;
   justify-content: space-around;
   align-items: center;
   font-family: sans-serif;
 
   a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: #3f3d56;
     opacity: 0.8;
     border-bottom: max(2px) solid transparent;
