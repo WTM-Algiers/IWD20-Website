@@ -126,7 +126,6 @@ export default function Footer() {
                         <StyledInput placeholder="Enter email address" 
                             name="email"
                             type="email"
-                            placeholder="example@example.com"
                             onChange={handleChange}/>
                         <BtnContainer type="submit">
                             <img  src={require("../../images/right-arrow.png")} alt="send"/>

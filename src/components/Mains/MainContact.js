@@ -102,7 +102,7 @@ const GoogleMaps = styled(Section)`
   justify-content: space-around;
   height: 70vh;
 `
-const Position = styled(Landing)`
+/*const Position = styled(Landing)`
   background-image: linear-gradient(
     to right top,
     #051937,
@@ -111,7 +111,7 @@ const Position = styled(Landing)`
     #32334e,
     #3f3d56
   );
-`
+`*/
 const Contact = styled.section`
   padding: 64px;
   width: 100%;

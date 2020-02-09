@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 import React from "react"
-import send from "../images/icons/send.svg"
+//import send from "../images/icons/send.svg"
 import Button from "./Button"
 
 const encode = data => {
@@ -135,10 +135,11 @@ const focusEffect = css`
   }
 `
 
-const Label = styled.label`
+/*const Label = styled.label`
   display: block;
   font-family: inherit;
-`
+`*/
+
 const Input = styled.input`
   opacity : 0.6;
   padding : 10px 16px;
@@ -176,7 +177,7 @@ const TextArea = styled.textarea`
     width: 80%;
   }
 `
-const CustomButton = styled(Button)`
+/*const CustomButton = styled(Button)`
   ${transition}
   .ctn-btn {
     display: flex;
@@ -197,6 +198,6 @@ const CustomButton = styled(Button)`
       display: block;
     }
   }
-`
+`*/
 export default ContactForm
 export { encode }
