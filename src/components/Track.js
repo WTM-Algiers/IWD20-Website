@@ -25,13 +25,17 @@ const Container = styled.div`
   }
   p {
     font-family: sans-serif;
-    text-align: center;
+    text-align: justify;
     max-width: 80%;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 `
 const Logo = styled.img`
-  width: 14%;
+  max-width: 100%;
+  max-height: 80px;
 `
 
 const Content = styled.div``

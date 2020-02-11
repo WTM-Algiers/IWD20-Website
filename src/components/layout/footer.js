@@ -30,8 +30,11 @@ export default function Footer() {
     <StyledFooter>
       <Container>
         <Title>About Us</Title>
-        <p>Some details about WTM </p>
-        <p>Some details about GDG</p>
+        <p>
+          WTM Algiers is a community that aims to inspire and enable more women
+          to join the tech industry.{" "}
+        </p>
+        <p>In partnership with GDG Algiers</p>
         <Copyrights>
           This website was built with{" "}
           <span role="img" aria-label="heart">
@@ -61,14 +64,14 @@ export default function Footer() {
               placeholder="example@example.com"
               onChange={handleChange}
             ></input>
+            <SendBtn type="submit">
+              <img src={send} alt="send"></img>
+            </SendBtn>
           </Input>
-          <SendBtn type="submit">
-            <img src={send} alt="send"></img>
-          </SendBtn>
         </form>
       </Container>
       <Container>
-        <Title>Social Media</Title>
+        <Title>Follow Us</Title>
         <p>
           Lets stay social{" "}
           <span role="img" aria-label="winky face">
@@ -94,15 +97,9 @@ const StyledFooter = styled.footer`
   position: relative;
   width: 100%;
   min-height: 10vh;
-  padding: 20px 0;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #17213f,
-    #252a46,
-    #32334e,
-    #3f3d56
-  );
+  padding: 2% 0;
+  background: #04091e;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -113,12 +110,21 @@ const Container = styled.div`
   width: 33%;
   margin: 0 5%;
   p {
-    font-family: sans-serif;
-    color: #aaa;
-    margin-bottom: 0.5rem;
+    color: #707070;
+    margin-top: 0;
+    max-width: 80%;
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5em;
   }
   @media screen and (max-width: 768px) {
     text-align: center;
+    p {
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
     width: 100%;
     margin: 5% 0;
   }
@@ -131,40 +137,45 @@ const Container = styled.div`
     }
   }
 `
-const Title = styled.h2`
+const Title = styled.h4`
   font-family: sans-serif;
   color: white;
   font-weight: bold;
 `
 
 const Input = styled.div`
-  display: inline-block;
+  display: flex;
   input {
     width: 100%;
     height: 50%;
     border: 2px solid #2bc9b4;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     padding: 10px;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 2px;
     border-right-color: transparent;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 2px;
   }
   @media screen and (max-width: 768px) {
     margin: auto;
     width: 70%;
+    max-width: 500px;
   }
 `
 const SendBtn = styled.button`
   width: 20%;
   color: white;
   background: #584ffa;
-  height: 50%;
+  height: 45%;
   border: 0px solid rgb(83, 144, 245);
   padding: 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   img {
     width: 10px;
+    margin: auto;
+  }
+  @media screen and (max-width: 768px) {
     margin: auto;
   }
 `

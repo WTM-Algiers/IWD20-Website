@@ -30,7 +30,12 @@ const SocialMedia = () => {
   return (
     <Container>
       {links.map((link, index) => (
-        <Link href={link.url} target="_blank" key={index} rel="noopener">
+        <Link
+          href={link.url}
+          target="_blank"
+          key={index}
+          rel="noopener noreferrer"
+        >
           <Icon src={link.icon} alt={link.alt}></Icon>
         </Link>
       ))}
@@ -57,7 +62,7 @@ const Link = styled.a`
 `
 const Icon = styled.img`
   margin-bottom: 0;
-  width: 70%;
+  width: 40%;
   max-width: 70px;
   opacity: 0.5;
   transition: 0.5s ease;
