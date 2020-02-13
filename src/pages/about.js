@@ -5,11 +5,49 @@ import styled from "styled-components"
 import { Link } from "gatsby" 
 
 import Button from "../components/Button"
+import SpeakerCard from "../components/speakerCard"
 // TODO : Implement Page
 // TODO : Add Description of IWD
 // TODO : Add past editions timeline
 // TODO : Add Ideathon , Confs , Workshops Sections
 // TODO : Add Speakers section
+
+const SpeakersList = [
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+        {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+  {picture: require("../images/speakers/amel.jpg"),
+        name:'Amel AZZI', role: 'Engineer', detail: 'Orange Application for business',
+        linkedin: 'https://www.linkedin.com/in/try-ajitiono/',
+        facebook: 'https://www.linkedin.com/in/try-ajitiono/'},
+
+]
+
+const Speaker = SpeakersList.map((mbr) =>
+    <SpeakerCard key={mbr.name} picture={mbr.picture} name={mbr.name} role={mbr.role} 
+        detail={mbr.detail} linkedin={mbr.linkedin} />
+);
 
 const StyleadHead = styled.div`
   height: 40vh;
@@ -71,6 +109,35 @@ const SelebrationContent = styled(Content)`
   padding: 64px;
 `
 
+const SpeakersContainer = styled.div`
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 64px;
+  h1{
+    font-size: 48px;
+    margin-top: 2%;
+    font-weight: 500;
+  }
+  
+`
+
+const Speakers = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 32px;
+  @media (min-width: 48.1em) and (max-width: 76.7em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media   (max-width: 48em) {
+      justify-content: center;
+  }
+`
+
 export default function about() {
   return (
     <Layout>
@@ -106,6 +173,12 @@ export default function about() {
             influenced the tech industry and beyond.
           </p>
       </SelebrationContent>
+      <SpeakersContainer>
+        <h1> Our Speakers </h1>
+        <Speakers>
+          {Speaker}
+        </Speakers>
+      </SpeakersContainer>
     </Layout>
   )
 }
