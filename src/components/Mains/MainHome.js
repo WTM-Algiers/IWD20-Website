@@ -47,7 +47,7 @@ export default function MainHome() {
         </Content>
       </Section2>
       <Section3>
-        <Title>EVENT CONTENT</Title>
+        <Title>Event Content</Title>
         <Tracks>
           <TrackItem>
             <Track
@@ -81,7 +81,29 @@ export default function MainHome() {
             <Record record={350} title="Registrations" />
       </Section4>
       <Section5>
-        <Title style={{ color: "white" }}>OUR PARTNERS</Title>
+        <Title style={{ color: "white" }}>Our Partners</Title>
+        <Partners>
+          <LogoContainer>
+            <a href="https://www.google.com/">
+              <img src={require("../../images/logos/google-icon-white.png")}/>
+            </a>
+          </LogoContainer>
+          <LogoContainer>
+            <a href="https://www.google.com/">
+              <img src={require("../../images/logos/google-icon-white.png")}/>
+            </a>
+          </LogoContainer>
+          <LogoContainer>
+            <a href="https://www.google.com/">
+              <img src={require("../../images/logos/google-icon-white.png")}/>
+            </a>
+          </LogoContainer>
+          <LogoContainer>
+            <a href="https://www.google.com/">
+              <img src={require("../../images/logos/google-icon-white.png")}/>
+            </a>
+          </LogoContainer>
+        </Partners>
       </Section5>
     </Wrapper>
   )
@@ -203,7 +225,29 @@ const Section5 = styled(Section3)`
     #00a7ff,
     #4285f4
   );
-  height: 40vh;
+  height: 60vh;
+`
+
+const Partners = styled.div`
+  width: 96%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+`
+
+const LogoContainer = styled.div`
+    width: 220px;
+    height: 140px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0.7;
+      :hover{
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
 `
 
 const Tracks = styled.ul`

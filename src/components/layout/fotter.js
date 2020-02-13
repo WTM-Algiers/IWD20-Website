@@ -139,22 +139,22 @@ export default function Footer() {
                 <SocialMediaContainer>
                     <SocialMedia>
                         <a href="https://github.com/amelazzi">
-                            <img src={require("../../images/github-icon-white.png")} alt="github"/>
+                            <img src={require("../../images/logos/github-icon-white.png")} alt="github"/>
                         </a>
                     </SocialMedia>
                     <SocialMedia>
                         <a href="https://www.linkedin.com/in/amel-azzi-625446b2/">
-                            <img src={require("../../images/linkedin-icon-white.png")} alt="linkedIn"/>
+                            <img src={require("../../images/logos/linkedin-icon-white.png")} alt="linkedIn"/>
                         </a>
                     </SocialMedia>
                     <SocialMedia>
                         <a href="https://www.facebook.com/misa.chan.9277">
-                            <img src={require("../../images/facebook-icon-white.png")} alt="facebook"/>
+                            <img src={require("../../images/logos/facebook-icon-white.png")} alt="facebook"/>
                         </a>
                     </SocialMedia>
                     <SocialMedia>
                         <a href="https://twitter.com/amelias_azzi">
-                            <img src={require("../../images/twitter-icon-white.png")} alt="twitter"/>
+                            <img src={require("../../images/logos/twitter-icon-white.png")} alt="twitter"/>
                         </a>
                     </SocialMedia>
                 </SocialMediaContainer>

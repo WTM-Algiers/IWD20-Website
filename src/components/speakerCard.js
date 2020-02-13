@@ -120,12 +120,12 @@ const SpeakerCard = ({picture, name, role, detail, linkedin, facebook}) => (
         <SocialMedia>
             <IconContainer>
                 <Link to={linkedin}> 
-                    <img src={require("../images/linkedin-icon-white.png")} alt='LinkedIn'/> 
+                    <img src={require("../images/logos/linkedin-icon-white.png")} alt='LinkedIn'/> 
                 </Link>
             </IconContainer>
             <IconContainer>
                 <Link to={facebook}> 
-                    <img src={require("../images/facebook-icon-white.png")} alt='facebook'/> 
+                    <img src={require("../images/logos/facebook-icon-white.png")} alt='facebook'/> 
                 </Link>
             </IconContainer>
             
