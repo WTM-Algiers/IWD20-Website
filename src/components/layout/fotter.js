@@ -7,6 +7,11 @@ const StyledFooter = styled.div`
     padding: 100px 70px;
     display: grid;
     grid-template-columns: 3fr 3fr 1fr;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
 `;
 
 const Content = styled.div`
@@ -30,8 +35,13 @@ const Content = styled.div`
 const InputContainer = styled.div`
     display: flex;
     flex-direction: row;
+    background: red;
     height: 2.4rem;
     justify-content: flex-start;
+    @media screen and (max-width: 768px) {
+        width: 110%;
+        margin-top: -8px;
+    }
 `;
 
 const StyledInput = styled.input`
@@ -60,6 +70,9 @@ const BtnContainer = styled.button`
         margin-top: 3px;
         object-fit: contain;
     }
+    @media screen and (max-width: 768px) {
+        width: 15%;
+    }
 `;
 
 const SocialMediaContainer = styled.div`
@@ -67,6 +80,10 @@ const SocialMediaContainer = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 32px;
+    @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+        margin-top: -8px;
+    }
 `;
 
 const SocialMedia = styled.div`
@@ -80,6 +97,12 @@ const SocialMedia = styled.div`
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+    @media screen and (max-width: 768px) {
+        margin-left: 18px;
+        :first-child{
+            margin-left: 0px;
+        }
     }
 `;
 
@@ -109,7 +132,7 @@ export default function Footer() {
     return(
         <StyledFooter>
             <Content>
-                <h4> About Me </h4>
+                <h4> About Us </h4>
                 <p> We have tested a number of registry fix and clean utilities and 
                     present our top 3 list on our site for your convenience. </p>
                 <p> Copyright ©2020 All rights reserved | This website is made with 
@@ -134,7 +157,7 @@ export default function Footer() {
                 </form>
             </Content>
             <Content>
-                <h4> Follow Me </h4>
+                <h4> Follow Us </h4>
                 <p> Let us be social </p>
                 <SocialMediaContainer>
                     <SocialMedia>
