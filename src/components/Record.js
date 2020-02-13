@@ -22,4 +22,7 @@ const Container = styled.div`
   h4{
     font-weight: 300;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 32px;
+  }
 `

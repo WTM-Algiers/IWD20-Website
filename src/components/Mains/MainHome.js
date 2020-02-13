@@ -129,7 +129,8 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     justify-content: center;
-    height: 90vh;
+    height: auto;
+    padding: 32px 0px;
     align-items: center;
   }
 `
@@ -145,6 +146,7 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: auto;
   }
   h5 {
     font-weight: 500;
@@ -154,27 +156,15 @@ const Content = styled.div`
 const CustomImg = styled.img`
   width: 50%;
   margin-left: 5%;
-  @media screen and (max-width: 1222px) {
-    width: 40%;
-  }
   @media screen and (max-width: 768px) {
-    width: 70%;
-    margin: 0;
-    margin-bottom: 10%;
-    margin-right: 10%;
+    width: 80%;
   }
 `
 
 const CustomImg2 = styled.img`
   width: 40%;
-  @media screen and (max-width: 1222px) {
-    width: 40%;
-  }
   @media screen and (max-width: 768px) {
-    width: 70%;
-    margin: 0;
-    margin-bottom: 10%;
-    margin-right: 10%;
+    width: 100%;
   }
 `
 /// Section 2
@@ -183,7 +173,8 @@ const Section2 = styled(Section)`
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    height: 90vh;
+    height: auto;
+    padding: 16px 64px;
   }
 `
 /// Section 3
@@ -226,6 +217,9 @@ const Section5 = styled(Section3)`
     #4285f4
   );
   height: 60vh;
+  @media screen and (max-width: 768px) {
+    padding-top: 64px;
+  }
 `
 
 const Partners = styled.div`
@@ -233,6 +227,10 @@ const Partners = styled.div`
   display: flex;
   flex-direction: row; 
   justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const LogoContainer = styled.div`
@@ -266,6 +264,9 @@ const TrackItem = styled.li`
   display: flex;
   justify-content: center;
   min-width: 33%;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 38px;
+  }
 `
 
 const Title = styled.h1`
