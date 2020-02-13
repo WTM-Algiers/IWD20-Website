@@ -6,6 +6,8 @@ import { Link } from "gatsby"
 
 import Button from "../components/Button"
 import SpeakerCard from "../components/speakerCard"
+import EditionCard from "../components/editionCard"
+import ReverseEditionCard from "../components/ReverseEditionCard"
 // TODO : Implement Page
 // TODO : Add Description of IWD
 // TODO : Add past editions timeline
@@ -122,6 +124,20 @@ const SelebrationContent = styled(Content)`
   }
 `
 
+const EditionsContainer = styled.div`
+  padding: 64px;
+  padding-top: 0px;
+  padding-bottom: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-size: 48px;
+    margin-top: 2%;
+    font-weight: 500;
+  }
+`
+
 const SpeakersContainer = styled.div`
   background-color: #F5F5F5;
   display: flex;
@@ -133,8 +149,12 @@ const SpeakersContainer = styled.div`
     margin-top: 2%;
     font-weight: 500;
   }
-  
 `
+
+const Editions = styled.div`
+  margin-top: 64px;
+`
+
 
 const Speakers = styled.div`
   display: flex;
@@ -186,6 +206,17 @@ export default function about() {
             influenced the tech industry and beyond.
           </p>
       </SelebrationContent>
+      <EditionsContainer>
+        <h1> Our Editions </h1>
+        <Editions>
+          <EditionCard year="18" 
+                venue="Higher National School of Computer Science -ESI ex INI-"
+                date="Marsh, 16th 2018"/>
+          <ReverseEditionCard year="19" 
+                venue="Centre Culturel Ali Maachi - Bordj El Bahri -"
+                date="April, 27th 2019"/>
+        </Editions>
+      </EditionsContainer>
       <SpeakersContainer>
         <h1> Our Speakers </h1>
         <Speakers>
