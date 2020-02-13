@@ -77,6 +77,10 @@ const DetailContent = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 64px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `
 
 const ImgContainer = styled.div`
@@ -89,6 +93,9 @@ const ImgContainer = styled.div`
     min-width: 100;
 
     object-fit:contain;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -103,10 +110,16 @@ const Content = styled.div`
     font-weight: 500;
     color: #626263;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 const SelebrationContent = styled(Content)`
   width: 100%;
   padding: 64px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 const SpeakersContainer = styled.div`
