@@ -1,11 +1,11 @@
 import styled from "styled-components"
-
+import theme from "../constants/theme.json"
 const Button = styled.button`
   padding: 0.6rem 1.8rem;
   font-family: sans-serif;
-  background-color: #6c63ff;
+  background-color: ${theme.light_mode.colors.primary};
   color: white;
-  border: 1px solid #6c63ff;
+  border: 1px solid ${theme.light_mode.colors.primary};
   transition: 0.5s ease-out;
   cursor: pointer;
   border-radius: 3px;
@@ -14,7 +14,7 @@ const Button = styled.button`
     border-color: white;
   }
   &:hover {
-    background-color: #5047f8;
+    background-color: ${theme.light_mode.colors.primary_dark};
   }
   text-decoration: none;
 `

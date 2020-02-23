@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import SocialMedia from "../SocialMedia"
 import send from "../../images/icons/next.svg"
+import theme from "../../constants/theme.json"
 import { encode } from "../ContactFrom"
 export default function Footer() {
   const [state, setState] = useState({})
@@ -98,7 +99,7 @@ const StyledFooter = styled.footer`
   width: 100%;
   min-height: 10vh;
   padding: 2% 0;
-  background: #04091e;
+  background: ${theme.light_mode.colors.dark};
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -165,10 +166,11 @@ const Input = styled.div`
 const SendBtn = styled.button`
   width: 20%;
   color: white;
-  background: #584ffa;
+  background: ${theme.light_mode.colors.accent};
   height: 45%;
   border: 0px solid rgb(83, 144, 245);
   padding: 10px;
+  cursor: pointer;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   img {

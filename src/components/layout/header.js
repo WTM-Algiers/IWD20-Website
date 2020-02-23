@@ -3,7 +3,7 @@ import NavBar from "./navbar"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
-
+import theme from "../../constants/theme.json"
 const Header = () => (
   <StyledHeader>
     <Link to="/">
@@ -11,14 +11,14 @@ const Header = () => (
     </Link>
     <h1
       style={{
-        color: "#00BFA5",
+        color: theme.light_mode.colors.primary,
         fontWeight: 400,
       }}
     >
       International Women's Day{" "}
       <span
         style={{
-          color: "#584FFA",
+          color: theme.light_mode.colors.accent,
         }}
       >
         2020

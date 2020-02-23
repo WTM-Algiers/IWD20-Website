@@ -4,7 +4,7 @@ import { MainWrapper as Wrapper } from "../Container"
 import ContactInfo from "../ContactInfo"
 import ContactFrom from "../ContactFrom"
 import Location from "../Location"
-
+import theme from "../../constants/theme.json"
 /// svgs :
 import call from "../../images/icons/call.svg"
 import email from "../../images/icons/email.svg"
@@ -62,7 +62,7 @@ const Section = styled.section`
 `
 const Landing = styled(Section)`
   text-align: center;
-  background: #04091e;
+  background: ${theme.light_mode.colors.dark};
   min-height: 40vh;
 `
 const Title = styled.h1`

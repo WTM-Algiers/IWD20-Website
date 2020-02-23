@@ -1,0 +1,16 @@
+{
+    "light_mode": {
+        "colors": {
+            "primary": "#00BFA5",
+            "accent": "#4285F4",
+            "primary_light": "",
+            "primary_dark": "#139682",
+            "accent_light": "",
+            "accent_dark": "",
+            "title_dark": "#3E3C55",
+            "subtitle_dark": "#626263",
+            "dark": "#04091e"
+        }
+
+    }
+}

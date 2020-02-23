@@ -25,7 +25,7 @@ const Container = styled.div`
   }
   p {
     font-family: sans-serif;
-    text-align: justify;
+    text-align: center;
     max-width: 80%;
     margin: 0 auto;
     @media screen and (max-width: 768px) {

@@ -5,17 +5,26 @@ import Button from "../Button"
 import Track from "../Track"
 import Record from "../Record"
 import { Link } from "gatsby"
+import theme from "../../constants/theme.json"
 /// pictures :
-import homeHead from "../../images/home_head.png"
-import homeAbout from "../../images/home_about.png"
+import homeHead from "../../images/super_woman.svg"
+import homeAbout from "../../images/logo.svg"
 import talkpic from "../../images/icons/001-lecture.png"
 import workshoppic from "../../images/icons/002-code.png"
 import ideathonpic from "../../images/icons/Solution.png"
-
+import gdg from "../../images/partners/gdg_algiers.png"
+import github from "../../images/partners/github_education.svg"
+import incubator from "../../images/partners/enp_incubator.svg"
+import marker from "../../images/icons/marker.svg"
+import event from "../../images/icons/event_icon.svg"
 export default function MainHome() {
   return (
     <Wrapper>
-      <Section>
+      <Section
+        style={{
+          height: "90vh",
+        }}
+      >
         <Content
           style={{
             width: "fit-content",
@@ -25,19 +34,25 @@ export default function MainHome() {
           <Title>IWD 20</Title>
           <p>
             <a href={enp} target="_blank" rel="noopener noreferrer">
+              <span>
+                <img src={marker} width="15px" alt="event location"></img>
+              </span>{" "}
               Ecole Nationale Polytechniques Alger (ENP)
             </a>
             <br></br>
+            <span>
+              <img src={event} width="15px" alt="event date"></img>
+            </span>{" "}
             March 6th-7th 2020
           </p>
-          <Button as={Link} to="/register/iwd">
+          <Button as={Link} to="/register/ideathon">
             Register
           </Button>
         </Content>
-        <CustomImg src={homeHead} alt="HomeHead"></CustomImg>
+        <CustomImg src={homeHead} alt="Landing image"></CustomImg>
       </Section>
       <Section2>
-        <CustomImg2 src={homeAbout} alt="HomeHead"></CustomImg2>
+        <CustomImg2 src={homeAbout} alt="Event Logo"></CustomImg2>
         <Content>
           <h5>ABOUT THE EVENT</h5>
           <Title>International Women's Day 2020</Title>
@@ -91,7 +106,29 @@ export default function MainHome() {
         <Record record={350} title="Registrations" />
       </Section4>
       <Section5>
-        <Title style={{ color: "white" }}>OUR PARTNERS</Title>
+        <Title
+          style={{
+            color: theme.light_mode.colors.title_dark,
+            marginTop: "1.45rem",
+          }}
+        >
+          OUR PARTNERS
+        </Title>
+        <Partners>
+          <div className="partner">
+            <img src={github} alt="github education"></img>
+          </div>
+          <div className="partner">
+            <img src={gdg} alt="gdg-algiers"></img>
+          </div>
+          <div className="partner">
+            <img
+              src={incubator}
+              alt="enp incubator by djezzy"
+              width="50%"
+            ></img>
+          </div>
+        </Partners>
       </Section5>
     </Wrapper>
   )
@@ -108,7 +145,6 @@ const Section = styled.div`
   }
   padding-top: 5% 0;
   width: 100%;
-  min-height: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,16 +172,17 @@ const Content = styled.div`
   }
   h5 {
     font-weight: 500;
-    color: #626263;
+    color: ${theme.light_mode.colors.subtitle_dark};
   }
   p a {
     text-decoration: none;
     opacity: 0.8;
+    color: #00bfa5;
     &:hover {
       opacity: 1;
     }
     &:visited {
-      color: black;
+      color: #4285f4;
     }
   }
 `
@@ -205,11 +242,11 @@ const Section4 = styled(Section3)`
   justify-content: space-around;
   background-image: linear-gradient(
     to right bottom,
-    #4285f4,
-    #3672dc,
-    #295fc5,
-    #1a4dae,
-    #043c98
+    #1ce9b6,
+    #00d8db,
+    #00c2fa,
+    #00a7ff,
+    #4285f4
   );
   h1 {
     margin-top: 2%;
@@ -218,15 +255,11 @@ const Section4 = styled(Section3)`
 `
 const Section5 = styled(Section3)`
   margin-top: 0;
-  background-image: linear-gradient(
-    to right bottom,
-    #1ce9b6,
-    #00d8db,
-    #00c2fa,
-    #00a7ff,
-    #4285f4
-  );
-  height: 40vh;
+
+  min-height: 70vh;
+  @media screen and (max-width: 768px) {
+    justify-content: space-evenly;
+  }
 `
 
 const Tracks = styled.ul`
@@ -252,7 +285,35 @@ const TrackItem = styled.li`
 
 const Title = styled.h1`
   font-family: sans-serif;
-  color: #3e3c55;
+  color: ${theme.light_mode.colors.title_dark};
+`
+
+const Partners = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  div.partner {
+    flex: 1;
+    max-width: 25%;
+    max-height: 25%;
+    text-align: center;
+    img {
+      max-height: 50%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      max-width: 100%;
+      max-height: 100%;
+      img {
+        margin: 10% 0;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `
 const content = {
   talks:

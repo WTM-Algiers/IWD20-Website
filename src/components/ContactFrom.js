@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components"
 import React from "react"
 import Button from "./Button"
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))

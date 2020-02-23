@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import commonStyle from "../../styles/common.module.css"
-
+import theme from "../../constants/theme.json"
 const links = [
   <Link to="/" activeClassName={commonStyle.linkActive} rel="noopener">
     Home
@@ -65,7 +65,7 @@ const StyledNavbar = styled.nav`
     transition: 0.1s ease-in;
     &:hover {
       opacity: 0.9;
-      color: #0dc2a9;
+      color: ${theme.light_mode.colors.primary};
       &.register {
         color: white;
         background-image: linear-gradient(

@@ -13,7 +13,7 @@ const SiteContstruction = ({ title }) => {
       <img src={image} alt="construction"></img>
       <h1> {title} page is under construction , see soon :D </h1>
       <Button>
-        <Link to="/register/iwd">Register Now</Link>
+        <Link to="/register/ideathon">Register Now</Link>
       </Button>
     </Container>
   )
