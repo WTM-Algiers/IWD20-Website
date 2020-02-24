@@ -8,6 +8,7 @@ const StyltedCArd = styled.div`
   width: 265px;
   padding: 10px;
   padding-bottom: 16px;
+  border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -107,10 +108,13 @@ const IconContainer = styled.div`
 
 const SpeakerCard = ({ picture, name, role, detail, linkedin, facebook }) => (
   <StyltedCArd>
-    <img
+    {/*
+       <img
       src={require("../images/speakers/speaker-bg.png")}
       alt="member background"
     />
+      */}
+
     <ProfilePic>
       <img src={picture} alt="profiles" />
     </ProfilePic>
