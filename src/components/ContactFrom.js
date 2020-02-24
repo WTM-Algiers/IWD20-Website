@@ -142,10 +142,10 @@ const focusEffect = css`
   }
 `
 
-/*const Label = styled.label`
+const Label = styled.label`
   display: block;
   font-family: inherit;
-`*/
+`
 
 const Input = styled.input`
   opacity : 0.6;
@@ -184,13 +184,13 @@ const TextArea = styled.textarea`
     width: 80%;
   }
 `
-/*const CustomButton = styled(Button)`
+const CustomButton = styled(Button)`
   ${transition}
   .ctn-btn {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-`*/
+`
 export default ContactForm
 export { encode }
