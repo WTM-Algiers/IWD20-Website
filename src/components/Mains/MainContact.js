@@ -4,7 +4,7 @@ import { MainWrapper as Wrapper } from "../Container"
 import ContactInfo from "../ContactInfo"
 import ContactFrom from "../ContactFrom"
 import Location from "../Location"
-
+import theme from "../../constants/theme.json"
 /// svgs :
 import call from "../../images/icons/call.svg"
 import email from "../../images/icons/email.svg"
@@ -16,12 +16,7 @@ export default function MainContact() {
   return (
     <Wrapper>
       <Landing>
-        <Title>
-          WTM Algiers Contacts
-          {/*<span role="img" aria-label="chat" className="emoji">
-            💬
-          </span>*/}
-        </Title>
+        <Title>WTM Algiers Contacts</Title>
       </Landing>
       <Contact>
         <Contacts>
@@ -29,7 +24,7 @@ export default function MainContact() {
             contact={{
               icon: call,
               alt: "call",
-              main: "+213 15 51 35 14",
+              main: "+213 776 66 90 08",
               snd: "Call us anytime we will surely answer",
             }}
           ></ContactInfo>
@@ -52,15 +47,6 @@ export default function MainContact() {
         </Contacts>
         <ContactFrom></ContactFrom>
       </Contact>
-
-      {/*<Position>
-        <Title>
-          Where are we
-          <span role="img" aria-label="red pin" className="emoji">
-            📌
-          </span>
-        </Title>
-      </Position>*/}
       <GoogleMaps>
         <Location></Location>
       </GoogleMaps>
@@ -76,14 +62,7 @@ const Section = styled.section`
 `
 const Landing = styled(Section)`
   text-align: center;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #17213f,
-    #252a46,
-    #32334e,
-    #3f3d56
-  );
+  background: ${theme.light_mode.colors.dark};
   min-height: 40vh;
 `
 const Title = styled.h1`
@@ -102,16 +81,6 @@ const GoogleMaps = styled(Section)`
   justify-content: space-around;
   height: 70vh;
 `
-/*const Position = styled(Landing)`
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #17213f,
-    #252a46,
-    #32334e,
-    #3f3d56
-  );
-`*/
 const Contact = styled.section`
   padding: 64px;
   width: 100%;
@@ -120,12 +89,14 @@ const Contact = styled.section`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
   }
 `
 const Contacts = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   @media screen and (max-width: 768px) {
     width: 80%;

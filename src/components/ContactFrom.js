@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components"
 import React from "react"
-//import send from "../images/icons/send.svg"
 import Button from "./Button"
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -16,7 +14,6 @@ const ContactForm = () => {
   }
 
   const handleSubmit = e => {
-    e.preventDefault()
     const form = e.target
     fetch("/", {
       method: "POST",
@@ -38,28 +35,35 @@ const ContactForm = () => {
     >
       <div className="inputs">
         <div className="form-group">
+          <Label for="name">Name</Label>
           <Input
-            name="fname"
+            name="name"
             type="text"
-            placeholder="Enter your name"
+            placeholder="ex: John Joe"
             onChange={handleChange}
+            required
           ></Input>
         </div>
-        
+
         <div className="form-group">
+          <Label for="email">Email</Label>
           <Input
             name="email"
             type="email"
-            placeholder="Enter email address"
+            pattern={RegExEmail}
+            placeholder="example@example.com"
+            required
             onChange={handleChange}
           ></Input>
         </div>
 
         <div className="form-group">
+          <Label for="subject">Subject of message</Label>
           <Input
-            name="lname"
+            name="subject"
             type="text"
-            placeholder="Enter subject"
+            required
+            placeholder="ex: WTM events"
             onChange={handleChange}
           ></Input>
         </div>
@@ -67,12 +71,15 @@ const ContactForm = () => {
       <TextArea
         name="message"
         placeholder="Enter Message ..."
+        required
         onChange={handleChange}
       ></TextArea>
-      <Button type="submit"> Send Message </Button>
+      <CustomButton type="submit"> Send Message </CustomButton>
     </Form>
   )
 }
+const RegExEmail =
+  "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/"
 const Form = styled.form`
   position: relative;
   width: 100%;
@@ -115,8 +122,8 @@ const Form = styled.form`
 `
 
 const border = css`
-  border: 1.4px solid #5047f8;
-  border-radius: 0px;
+  border: 1.7px solid #5047f8;
+  border-radius: 2px;
   outline: none;
 `
 const transition = css`
@@ -125,13 +132,13 @@ const transition = css`
 const hoverEffect = css`
   &:hover {
     opacity: 0.8;
-    border: 2px solid #5047f8;
+    border: 1.7px solid #5047f8;
   }
 `
 const focusEffect = css`
   &:focus {
     opacity: 1;
-    border: 2px solid #5047f8;
+    border: 1.7px solid #5047f8;
   }
 `
 
@@ -183,20 +190,6 @@ const TextArea = styled.textarea`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
-    img {
-      display: none;
-      transition: 0.9s ease-in-out;
-      margin: 0;
-      margin-left: 10px;
-      width: 0px;
-    }
-  }
-  &:hover {
-    .ctn-btn img {
-      width: 30px;
-      display: block;
-    }
   }
 `*/
 export default ContactForm

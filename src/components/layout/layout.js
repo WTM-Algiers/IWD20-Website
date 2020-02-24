@@ -9,13 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import BaseLayout from "./baseLayout"
-import Footer from "./fotter"
+
 import "../../styles/layout.css"
+import Fot from "./footer"
 const Layout = ({ children }) => {
   return (
     <>
       <BaseLayout>{children}</BaseLayout>
-      <Footer />
+      <Fot></Fot>
     </>
   )
 }
