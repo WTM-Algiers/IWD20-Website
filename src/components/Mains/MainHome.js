@@ -2,21 +2,19 @@ import React from "react"
 import styled from "styled-components"
 import { MainWrapper as Wrapper } from "../Container"
 import Button from "../Button"
-import Track from "../Track"
 import Record from "../Record"
 import { Link } from "gatsby"
 import theme from "../../constants/theme.json"
 /// pictures :
 import homeHead from "../../images/super_woman.svg"
 import homeAbout from "../../images/logo.svg"
-import talkpic from "../../images/icons/001-lecture.png"
-import workshoppic from "../../images/icons/002-code.png"
-import ideathonpic from "../../images/icons/Solution.png"
 import gdg from "../../images/partners/gdg_algiers.png"
 import github from "../../images/partners/github_education.svg"
 import incubator from "../../images/partners/enp_incubator.svg"
 import marker from "../../images/icons/marker.svg"
 import event from "../../images/icons/event_icon.svg"
+import EditionCard from "../../components/editionCard"
+import ReverseEditionCard from "../../components/ReverseEditionCard"
 export default function MainHome() {
   return (
     <Wrapper>
@@ -67,39 +65,21 @@ export default function MainHome() {
           </Button>
         </Content>
       </Section2>
-      <Section3
-        style={{
-          marginTop: "10vh",
-        }}
-      >
-        <Title>EVENT CONTENT</Title>
-        <Tracks>
-          <TrackItem>
-            <Track
-              imgsource={talkpic}
-              altimg="Talks and panels"
-              title="Talks & panels"
-              content={content.talks}
-            ></Track>
-          </TrackItem>
-          <TrackItem>
-            <Track
-              imgsource={workshoppic}
-              altimg="workshops"
-              title="Workshops"
-              content={content.workshops}
-            ></Track>
-          </TrackItem>
-          <TrackItem>
-            <Track
-              imgsource={ideathonpic}
-              altimg="Ideathon"
-              title="Ideathon"
-              content={content.ideathon}
-            ></Track>
-          </TrackItem>
-        </Tracks>
-      </Section3>
+      <EditionsContainer>
+        <h1> Our Editions </h1>
+        <Editions>
+          <EditionCard
+            year="18"
+            venue="Higher National School of Computer Science -ESI ex INI-"
+            date="Marsh, 16th 2018"
+          />
+          <ReverseEditionCard
+            year="19"
+            venue="Centre Culturel Ali Maachi - Bordj El Bahri -"
+            date="April, 27th 2019"
+          />
+        </Editions>
+      </EditionsContainer>
       <Section4>
         <Record record={3} title="Editions" />
         <Record record={290} title="Happy participants" />
@@ -214,6 +194,27 @@ const Section2 = styled(Section)`
     min-height: 90vh;
   }
 `
+
+
+const EditionsContainer = styled.div`
+  padding: 64px;
+  padding-top: 0px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  h1 {
+    font-size: 48px;
+    margin-top: 2%;
+    font-weight: 500;
+  }
+`
+
+const Editions = styled.div`
+  margin-top: 64px;
+`
+
 /// Section 3
 const Section3 = styled(Section2)`
   flex-direction: column;
@@ -254,27 +255,6 @@ const Section5 = styled(Section3)`
   }
 `
 
-const Tracks = styled.ul`
-  width: 100%;
-  margin-top: 5%;
-  margin-left: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`
-const TrackItem = styled.li`
-  display: flex;
-  justify-content: center;
-  min-width: 33%;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 10%;
-  }
-`
-
 const Title = styled.h1`
   font-family: sans-serif;
   color: ${theme.light_mode.colors.title_dark};
@@ -307,12 +287,6 @@ const Partners = styled.div`
     justify-content: space-between;
   }
 `
-const content = {
-  talks:
-    "Acquiring technical skills only never could be enough so we are having series of both technical and soft talks. Moreover, multiple panels will be held by stellar women who are going to share their successful stories in several fields.",
-  workshops:
-    "Since celebration could never be done without having some tech snacks, we are giving you , technology passionates, the opportunity to explore more about web development, mobile development and AI through fruitful workshops. As well as for no programmers, a special track is waiting to you.",
-  ideathon: `An ideathon is a moderated idea marathon that helps people address some of the most pressing challenges of our time. IWD Ideathon main goal is to help the community evolve, by attempting to solve problems related to a specific theme.Participants will work in teams and use design thinking and innovative learning practices to ideate and collaborate on possible solutions under mentorship of experienced coaches.`,
-}
+
 const enp =
   "https://www.google.com/maps/place/Ecole+Nationale+Polytechnique/@36.7232318,3.1507596,15z/data=!4m2!3m1!1s0x0:0x2bb008bbddc747d3?sa=X&ved=2ahUKEwjB-dnypMrnAhWIsBQKHejSCNkQ_BIwFnoECAsQCA"

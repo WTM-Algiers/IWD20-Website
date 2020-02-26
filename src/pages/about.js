@@ -5,9 +5,13 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import theme from "../constants/theme.json"
 import Button from "../components/Button"
+import Track from "../components/Track"
+
+import talkpic from "../images/icons/001-lecture.png"
+import workshoppic from "../images/icons/002-code.png"
+import ideathonpic from "../images/icons/Solution.png"
 import SpeakerCard from "../components/speakerCard"
-import EditionCard from "../components/editionCard"
-import ReverseEditionCard from "../components/ReverseEditionCard"
+
 // TODO : Implement Page
 // TODO : Add Description of IWD
 // TODO : Add past editions timeline
@@ -150,19 +154,78 @@ const SelebrationContent = styled(Content)`
   }
 `
 
-const EditionsContainer = styled.div`
-  padding: 64px;
-  padding-top: 0px;
-  padding-bottom: 192px;
-  display: flex;
-  flex-direction: column;
+/// Section 3
+const Section3 = styled.div`
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+padding-top: 5% 0;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+@media screen and (max-width: 768px) {
+  flex-direction: column-reverse;
+  justify-content: center;
+  min-height: 90vh;
   align-items: center;
-  h1 {
-    font-size: 48px;
-    margin-top: 2%;
-    font-weight: 500;
+}
+  flex-direction: column;
+  height: auto;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    min-height: 90vh;
+
+    height: auto;
+    justify-content: space-around;
+  }
+
+  background-color: #fff;
+  margin-top: 5%;
+  justify-content: space-evenly;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    min-height: 90vh;
   }
 `
+
+const Tracks = styled.ul`
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+const TrackItem = styled.li`
+  display: flex;
+  justify-content: center;
+  min-width: 33%;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10%;
+  }
+`
+
+
+const Title = styled.h1`
+  font-family: sans-serif;
+  color: ${theme.light_mode.colors.title_dark};
+`
+
+const content = {
+  talks:
+    "Acquiring technical skills only never could be enough so we are having series of both technical and soft talks. Moreover, multiple panels will be held by stellar women who are going to share their successful stories in several fields.",
+  workshops:
+    "Since celebration could never be done without having some tech snacks, we are giving you , technology passionates, the opportunity to explore more about web development, mobile development and AI through fruitful workshops. As well as for no programmers, a special track is waiting to you.",
+  ideathon: `An ideathon is a moderated idea marathon that helps people address some of the most pressing challenges of our time. IWD Ideathon main goal is to help the community evolve, by attempting to solve problems related to a specific theme.Participants will work in teams and use design thinking and innovative learning practices to ideate and collaborate on possible solutions under mentorship of experienced coaches.`,
+}
 
 const SpeakersContainer = styled.div`
   background-color: #f5f5f5;
@@ -177,9 +240,7 @@ const SpeakersContainer = styled.div`
   }
 `
 
-const Editions = styled.div`
-  margin-top: 64px;
-`
+
 
 const Speakers = styled.div`
   display: flex;
@@ -234,21 +295,39 @@ export default function about() {
           how women have influenced the tech industry and beyond.
         </p>
       </SelebrationContent>
-      <EditionsContainer>
-        <h1> Our Editions </h1>
-        <Editions>
-          <EditionCard
-            year="18"
-            venue="Higher National School of Computer Science -ESI ex INI-"
-            date="Marsh, 16th 2018"
-          />
-          <ReverseEditionCard
-            year="19"
-            venue="Centre Culturel Ali Maachi - Bordj El Bahri -"
-            date="April, 27th 2019"
-          />
-        </Editions>
-      </EditionsContainer>
+      <Section3
+        style={{
+          marginTop: "10vh",
+        }}
+      >
+        <Title>EVENT CONTENT</Title>
+        <Tracks>
+          <TrackItem>
+            <Track
+              imgsource={talkpic}
+              altimg="Talks and panels"
+              title="Talks & panels"
+              content={content.talks}
+            ></Track>
+          </TrackItem>
+          <TrackItem>
+            <Track
+              imgsource={workshoppic}
+              altimg="workshops"
+              title="Workshops"
+              content={content.workshops}
+            ></Track>
+          </TrackItem>
+          <TrackItem>
+            <Track
+              imgsource={ideathonpic}
+              altimg="Ideathon"
+              title="Ideathon"
+              content={content.ideathon}
+            ></Track>
+          </TrackItem>
+        </Tracks>
+      </Section3>
       <SpeakersContainer>
         <h1> Our Speakers </h1>
         <Speakers>{Speaker}</Speakers>

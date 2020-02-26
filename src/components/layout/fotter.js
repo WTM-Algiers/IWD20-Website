@@ -161,23 +161,23 @@ export default function Footer() {
                 <p> Let us be social </p>
                 <SocialMediaContainer>
                     <SocialMedia>
-                        <a href="https://github.com/amelazzi">
-                            <img src={require("../../images/logos/github-icon-white.png")} alt="github"/>
-                        </a>
-                    </SocialMedia>
-                    <SocialMedia>
-                        <a href="https://www.linkedin.com/in/amel-azzi-625446b2/">
-                            <img src={require("../../images/logos/linkedin-icon-white.png")} alt="linkedIn"/>
-                        </a>
-                    </SocialMedia>
-                    <SocialMedia>
-                        <a href="https://www.facebook.com/misa.chan.9277">
+                        <a href="https://www.facebook.com/WomenTechmakersAlgiers/">
                             <img src={require("../../images/logos/facebook-icon-white.png")} alt="facebook"/>
                         </a>
                     </SocialMedia>
                     <SocialMedia>
-                        <a href="https://twitter.com/amelias_azzi">
+                        <a href="https://twitter.com/AlgiersWTM">
                             <img src={require("../../images/logos/twitter-icon-white.png")} alt="twitter"/>
+                        </a>
+                    </SocialMedia>
+                    <SocialMedia>
+                        <a href="https://www.wtm-algiers.tech/">
+                            <img src={require("../../images/icons/website.png")} alt="website"/>
+                        </a>
+                    </SocialMedia>
+                    <SocialMedia>
+                        <a href="https://www.linkedin.com/company/wtm-algiers/">
+                            <img src={require("../../images/logos/linkedin-icon-white.png")} alt="linkedIn"/>
                         </a>
                     </SocialMedia>
                 </SocialMediaContainer>
