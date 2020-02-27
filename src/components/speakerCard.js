@@ -106,7 +106,7 @@ const IconContainer = styled.div`
   }
 `
 
-const SpeakerCard = ({ picture, name, role, detail, linkedin, facebook }) => (
+const SpeakerCard = ({ picture, name, role, detail, linkedin, facebook, twitter }) => (
   <StyltedCArd>
     {/*
        <img
@@ -135,6 +135,14 @@ const SpeakerCard = ({ picture, name, role, detail, linkedin, facebook }) => (
           <img
             src={require("../images/logos/facebook-icon-white.png")}
             alt="facebook"
+          />
+        </Link>
+      </IconContainer>
+      <IconContainer>
+        <Link to={twitter}>
+          <img
+            src={require("../images/logos/twitter-icon-white.png")}
+            alt="twitter"
           />
         </Link>
       </IconContainer>

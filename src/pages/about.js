@@ -21,60 +21,67 @@ import SpeakerCard from "../components/speakerCard"
 const SpeakersList = [
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
+    name: "Fayçal ZEMMOUR",
     role: "Engineer",
     detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    linkedin: "https://www.linkedin.com/in/fay%C3%A7al-zemmour-908680aa/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/people/Fay%C3%A7al-Zemmour/100010969845387?_rdc=1&_rdr",
+    twitter: "https://twitter.com/faycal_zemmour?s=20"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    name: "Walid FELLAH",
+    role: "User Experience Designer",
+    detail: "BEYN beyn.io",
+    linkedin: "https://www.linkedin.com/in/walid-fellah/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/walidweb7?_rdc=1&_rdr",
+    twitter: "https://twitter.com/"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    name: "Feriel OUCIF",
+    role: "Digital Strategist",
+    detail: "IONE Company",
+    linkedin: "https://www.linkedin.com/in/ferial-oucif-635a6016b/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/Hisabatic.ione?__tn__=lC-R&eid=ARCeYiZ-fKOYqrXF4E4mcIpG6khfp2cU2E6ONxyLhpmL4DcYzs7MFiXm4j6-PuCnHyRGhNjxXDRXc8an&hc_ref=ARQTxUrVqj1Sg5CQxDWfPpFthALoo1dNVl2UHA883lqevLNst320qUB04XO-j8MZJ6c&ref=nf_target",
+    twitter: "https://twitter.com/"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    name: "Ikram Loubna Nour",
+    role: "Marketer",
+    detail: "ICONE Consultancy Agency",
+    linkedin: "https://www.linkedin.com/in/ikram-loubna-nour-b36b81106/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/ikramloubnanour",
+    twitter: "https://twitter.com/"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    name: "Ikram Loubna Nour",
+    role: "Former Project Manager",
+    detail: "EADN",
+    linkedin: "https://www.linkedin.com/in/ikram-loubna-nour-b36b81106/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/ikramloubnanour",
+    twitter: "https://twitter.com/"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
+    name: "Amel DELLI",
+    role: "Former Project Manager",
+    detail: "EADN",
+    linkedin: "https://www.linkedin.com/in/ameldelli/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/",
+    twitter: "https://twitter.com/Amel_DELLI?s=20"
   },
   {
     picture: require("../images/speakers/amel.jpg"),
-    name: "Amel AZZI",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin: "https://www.linkedin.com/in/try-ajitiono/",
-    facebook: "https://www.linkedin.com/in/try-ajitiono/",
-  },
+    name: "Leila BENYOUCEF",
+    role: "",
+    detail: "",
+    linkedin: "https://www.linkedin.com/in/leila-benyoucef/?originalSubdomain=dz",
+    facebook: "https://web.facebook.com/",
+    twitter: "https://twitter.com/"
+  }
 ]
 
 const Speaker = SpeakersList.map(mbr => (
@@ -329,7 +336,7 @@ export default function about() {
         </Tracks>
       </Section3>
       <SpeakersContainer>
-        <h1> Our Speakers </h1>
+        <h1> Our Mentors </h1>
         <Speakers>{Speaker}</Speakers>
       </SpeakersContainer>
     </Layout>
