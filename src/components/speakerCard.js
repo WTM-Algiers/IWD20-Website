@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import theme from "../constants/theme.json"
 const StyltedCArd = styled.div`
   position: relative;
   background: white;
@@ -35,7 +35,7 @@ const StyltedCArd = styled.div`
     padding: 16px 0 0 0;
   }
   h2 {
-    color: #6c63ff;
+    color: ${theme.light_mode.colors.accent};
   }
   p {
     color: black;
@@ -106,7 +106,15 @@ const IconContainer = styled.div`
   }
 `
 
-const SpeakerCard = ({ picture, name, role, detail, linkedin, facebook, twitter }) => (
+const SpeakerCard = ({
+  picture,
+  name,
+  role,
+  detail,
+  linkedin,
+  facebook,
+  twitter,
+}) => (
   <StyltedCArd>
     {/*
        <img

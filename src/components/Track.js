@@ -17,6 +17,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   text-align: center;
   align-items: center;
   h3 {
@@ -34,6 +35,7 @@ const Container = styled.div`
   }
 `
 const Logo = styled.img`
+  min-width: 80px;
   max-width: 100%;
   max-height: 80px;
 `
