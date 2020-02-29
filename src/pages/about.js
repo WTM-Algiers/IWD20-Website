@@ -127,6 +127,7 @@ const DetailContent = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 `
 
@@ -149,9 +150,11 @@ const ImgContainer = styled.div`
 const Content = styled.div`
   width: 40%;
   font-family: sans-serif;
+
   h1 {
     margin-top: 2%;
     font-weight: 500;
+    color: ${theme.light_mode.colors.title_dark};
   }
   h5 {
     font-weight: 500;
@@ -164,8 +167,14 @@ const Content = styled.div`
 const SelebrationContent = styled(Content)`
   width: 100%;
   padding: 64px;
+  text-align: center;
+  p {
+    width: 80%;
+    margin: auto;
+  }
   @media screen and (max-width: 768px) {
     text-align: center;
+    padding: 20px;
   }
 `
 
@@ -226,9 +235,9 @@ const TrackItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 33%;
+  min-width: 20%;
   a {
-    width: 40%;
+    min-width: 40%;
   }
   @media screen and (max-width: 768px) {
     margin-bottom: 10%;
@@ -291,6 +300,7 @@ const Ideathon = styled(Container)`
 `
 const Workshops = styled(Container)`
   background-color: #fafafa;
+  padding-bottom: 64px;
   p {
     margin-top: 5%;
     max-width: 80%;
@@ -332,8 +342,13 @@ export default function about() {
             respect and appreciation for women to a celebration of women’s
             economic, political, and social achievements.
           </p>
-          <Button as={Link} to="/contact">
-            Contact Us
+          <Button
+            as={link}
+            href="https://www.internationalwomensday.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Learn more
           </Button>
         </Content>
       </DetailContent>
@@ -359,10 +374,14 @@ export default function about() {
         ></img>
         <p>{content.ideathon}</p>
       </Ideathon>
-      <SpeakersContainer>
+      {/**
+       * <SpeakersContainer>
         <h1> Our Mentors </h1>
         <Speakers>{Speaker}</Speakers>
       </SpeakersContainer>
+       * 
+       */}
+
       <Workshops>
         <h1>
           Workshops{" "}
@@ -389,7 +408,7 @@ export default function about() {
               imgsource={gatsby}
               altimg="Gatsby workshop"
               title="Web developement in Gatsby/React"
-              content="Learn how build your first site the powerfull framework Gatsby"
+              content="Learn how how build your first site with the powerful framework Gatsby"
             ></Track>
             <Button
               as={link}
@@ -439,18 +458,32 @@ export default function about() {
               title="Basic Computer Science"
               content="Discover a new field and some of its core concepts"
             ></Track>
+            <Button
+              as={link}
+              href="https://en.wikipedia.org/wiki/Computer_science"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Learn more
+            </Button>
           </TrackItem>
         </Tracks>
       </Workshops>
-      <Container>
-        <h1> Trainers </h1>
+      {/**
+       * <Container>
+        <h1> Our Trainers </h1>
         <Speakers>{Speaker}</Speakers>
       </Container>
-      <Talks></Talks>
-      <Container>
+       * 
+       */}
+      {/**
+          * <Talks></Talks>
+       * <Container>
         <h1> Speakers </h1>
         <Speakers>{Speaker}</Speakers>
       </Container>
+       * 
+       */}
     </Layout>
   )
 }

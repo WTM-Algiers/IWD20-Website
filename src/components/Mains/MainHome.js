@@ -16,6 +16,9 @@ import event from "../../images/icons/event_icon.svg"
 import EditionCard from "../../components/editionCard"
 import ReverseEditionCard from "../../components/ReverseEditionCard"
 import yassir from "../../images/partners/yassir-seeklogo.com.svg"
+import techno from "../../images/partners/techno.png"
+import soc from "../../images/partners/societe.png"
+import sai from "../../images/partners/schoolai.png"
 export default function MainHome() {
   return (
     <Wrapper>
@@ -136,6 +139,33 @@ export default function MainHome() {
               <img src={github} alt="github education"></img>
             </a>
           </div>
+          <div className="partner">
+            <a
+              href="http://techno-dz.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={techno} alt="techno" width="70%"></img>
+            </a>
+          </div>
+          <div className="partner">
+            <a
+              href="http://www.cgea-dz.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={soc} alt="cgea"></img>
+            </a>
+          </div>
+          <div className="partner">
+            <a
+              href="https://www.linkedin.com/company/school-of-ai-algiers/?originalSubdomain=fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={sai} alt="school of ai"></img>
+            </a>
+          </div>
         </Partners>
       </Section5>
     </Wrapper>
@@ -168,6 +198,7 @@ const Content = styled.div`
   font-family: sans-serif;
   display: flex;
   width: 40%;
+
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -177,7 +208,6 @@ const Content = styled.div`
     width: 80%;
     align-items: center;
     text-align: center;
-    width: auto;
   }
   h5 {
     font-weight: 500;
@@ -204,12 +234,12 @@ const CustomImg = styled.img`
 `
 
 const CustomImg2 = styled.img`
-  width: 30%;
+  width: 20%;
   @media screen and (max-width: 1222px) {
-    width: 40%;
+    width: 20%;
   }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 50%;
   }
 `
 /// Section 2
@@ -249,7 +279,6 @@ const Section3 = styled(Section2)`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     min-height: 90vh;
-
     height: auto;
     justify-content: space-around;
   }
@@ -278,6 +307,7 @@ const Section5 = styled(Section3)`
 
   min-height: 70vh;
   @media screen and (max-width: 768px) {
+    padding-top: 50px;
     justify-content: space-evenly;
   }
 `

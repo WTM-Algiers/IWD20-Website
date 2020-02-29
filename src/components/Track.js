@@ -23,10 +23,12 @@ const Container = styled.div`
   h3 {
     font-family: sans-serif;
     color: #3e3c55;
+    font-size: 100%;
   }
   p {
     font-family: sans-serif;
     text-align: center;
+    font-size: 100%;
     max-width: 80%;
     margin: 0 auto;
     @media screen and (max-width: 768px) {
