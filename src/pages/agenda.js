@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import theme from "../constants/theme.json"
+import Main from "../components/layout/MainConstruction"
 // TODO : Implement Page
 // TODO : Add Agenda to the page ( the actual agenda)
 
@@ -25,9 +26,7 @@ export default function agenda() {
   return (
     <Layout>
       <SEO title="Agenda"></SEO>
-      <StyleadHead>
-        <h1> IWD'20 Agenda </h1>
-      </StyleadHead>
+      <Main title="Agenda"></Main>
     </Layout>
   )
 }

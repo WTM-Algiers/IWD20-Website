@@ -40,7 +40,7 @@ export default function MainContact() {
             contact={{
               icon: email,
               alt: "email",
-              main: "wtm-algiers@esi.dz",
+              main: "wtm.algiers@esi.dz",
               snd: "send us an email",
             }}
           ></ContactInfo>
