@@ -6,7 +6,7 @@ export default function iwd() {
   return (
     <Layout>
       <SEO title="Register"></SEO>
-      <Typeform url="https://nassim780857.typeform.com/to/dxD0Pq"></Typeform>
+      <Typeform url="https://nassim780857.typeform.com/to/l7LmVV"></Typeform>
     </Layout>
   )
 }

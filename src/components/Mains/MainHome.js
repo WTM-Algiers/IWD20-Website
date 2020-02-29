@@ -17,6 +17,7 @@ import github from "../../images/partners/github_education.svg"
 import incubator from "../../images/partners/enp_incubator.svg"
 import marker from "../../images/icons/marker.svg"
 import event from "../../images/icons/event_icon.svg"
+import yassir from "../../images/partners/yassir-seeklogo.com.svg"
 export default function MainHome() {
   return (
     <Wrapper>
@@ -45,7 +46,7 @@ export default function MainHome() {
             </span>{" "}
             March 6th-7th 2020
           </p>
-          <Button as={Link} to="/register/ideathon">
+          <Button as={Link} to="/register/iwd">
             Register
           </Button>
         </Content>
@@ -116,17 +117,44 @@ export default function MainHome() {
         </Title>
         <Partners>
           <div className="partner">
-            <img src={github} alt="github education"></img>
+            <a
+              href="https://gdgalgiers.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={gdg} alt="gdg-algiers"></img>
+            </a>
           </div>
           <div className="partner">
-            <img src={gdg} alt="gdg-algiers"></img>
+            <a
+              href="http://www.djezzy.dz/enpincubatorbydjezzy/#pourquoi-sinscrir"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                src={incubator}
+                alt="enp incubator by djezzy"
+                width="50%"
+              ></img>
+            </a>
           </div>
           <div className="partner">
-            <img
-              src={incubator}
-              alt="enp incubator by djezzy"
-              width="50%"
-            ></img>
+            <a
+              href="https://yassir.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={yassir} alt="yassir" width="50%"></img>
+            </a>
+          </div>
+          <div className="partner">
+            <a
+              href="https://education.github.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={github} alt="github education"></img>
+            </a>
           </div>
         </Partners>
       </Section5>
@@ -290,13 +318,24 @@ const Title = styled.h1`
 
 const Partners = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
   justify-content: space-around;
   align-items: center;
-
+  margin: 0 5%;
   div.partner {
     flex: 1;
+    min-width: 20%;
     max-width: 25%;
     max-height: 25%;
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    &:hover {
+      opacity: 1;
+    }
     text-align: center;
     img {
       max-height: 50%;
