@@ -9,6 +9,7 @@ import theme from "../../constants/theme.json"
 import homeHead from "../../images/super_woman.svg"
 import homeAbout from "../../images/logo.svg"
 import gdg from "../../images/partners/gdg_algiers.png"
+import wtm from "../../images/partners/WTMAlgiersLogoDark.svg"
 import github from "../../images/partners/github_education.svg"
 import incubator from "../../images/partners/enp_incubator.svg"
 import marker from "../../images/icons/marker.svg"
@@ -96,9 +97,18 @@ export default function MainHome() {
             marginTop: "1.45rem",
           }}
         >
-          OUR PARTNERS
+          ORGANIZERS
         </Title>
         <Partners>
+          <div className="partner">
+            <a
+              href="https://wtm-algiers.tech/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={wtm} alt="wtm-algiers"></img>
+            </a>
+          </div>
           <div className="partner">
             <a
               href="https://gdgalgiers.com/"
@@ -108,6 +118,21 @@ export default function MainHome() {
               <img src={gdg} alt="gdg-algiers"></img>
             </a>
           </div>
+        </Partners>
+      </Section5>
+      <Section5
+        style={{
+          background: "#fafafa",
+        }}
+      >
+        <Title
+          style={{
+            color: theme.light_mode.colors.title_dark,
+          }}
+        >
+          OUR PARTNERS
+        </Title>
+        <Partners>
           <div className="partner">
             <a
               href="http://www.djezzy.dz/enpincubatorbydjezzy/#pourquoi-sinscrir"
@@ -121,6 +146,26 @@ export default function MainHome() {
               ></img>
             </a>
           </div>
+          <div className="partner">
+            <a
+              href="https://www.linkedin.com/company/school-of-ai-algiers/?originalSubdomain=fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={sai} alt="school of ai"></img>
+            </a>
+          </div>
+        </Partners>
+      </Section5>
+      <Section5>
+        <Title
+          style={{
+            color: theme.light_mode.colors.title_dark,
+          }}
+        >
+          OUR SPONSORS
+        </Title>
+        <Partners>
           <div className="partner">
             <a
               href="https://yassir.io/"
@@ -155,15 +200,6 @@ export default function MainHome() {
               target="_blank"
             >
               <img src={soc} alt="cgea"></img>
-            </a>
-          </div>
-          <div className="partner">
-            <a
-              href="https://www.linkedin.com/company/school-of-ai-algiers/?originalSubdomain=fr"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={sai} alt="school of ai"></img>
             </a>
           </div>
         </Partners>
@@ -305,7 +341,7 @@ const Section4 = styled(Section3)`
 const Section5 = styled(Section3)`
   margin-top: 0;
 
-  min-height: 70vh;
+  min-height: 50vh;
   @media screen and (max-width: 768px) {
     padding-top: 50px;
     justify-content: space-evenly;

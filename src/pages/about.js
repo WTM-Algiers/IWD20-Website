@@ -293,6 +293,15 @@ const Ideathon = styled(Container)`
     max-width: 80%;
     text-align: center;
   }
+  h2.theme {
+    color: ${theme.light_mode.colors.primary};
+    font-weight: 400;
+  }
+  p.theme {
+    margin-top: 0;
+    max-width: 80%;
+    text-align: center;
+  }
   img {
     margin: auto;
     width: 300px;
@@ -373,6 +382,10 @@ export default function about() {
           width="20%"
         ></img>
         <p>{content.ideathon}</p>
+        <h2 class="theme">This year's theme will be</h2>
+        <p class="theme">
+          <i>Women's online safety</i>
+        </p>
       </Ideathon>
       {/**
        * <SpeakersContainer>
@@ -410,14 +423,6 @@ export default function about() {
               title="Web developement in Gatsby/React"
               content="Learn how how build your first site with the powerful framework Gatsby"
             ></Track>
-            <Button
-              as={link}
-              href="https://www.gatsbyjs.org/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Get Started
-            </Button>
           </TrackItem>
           <TrackItem>
             <Track
@@ -426,14 +431,6 @@ export default function about() {
               title="Mobile developement in Flutter"
               content="Build cool looking apps in record times using Flutter"
             ></Track>
-            <Button
-              as={link}
-              href="https://flutter.dev/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Get Started
-            </Button>
           </TrackItem>
           <TrackItem>
             <Track
@@ -442,14 +439,6 @@ export default function about() {
               title="Artificiel Intelligence"
               content="Grasp the concepts behind intelligent apps and build one yourself"
             ></Track>
-            <Button
-              as={link}
-              href="https://www.anaconda.com/distribution/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Get Started
-            </Button>
           </TrackItem>
           <TrackItem>
             <Track
@@ -458,14 +447,6 @@ export default function about() {
               title="Basic Computer Science"
               content="Discover a new field and some of its core concepts"
             ></Track>
-            <Button
-              as={link}
-              href="https://en.wikipedia.org/wiki/Computer_science"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Learn more
-            </Button>
           </TrackItem>
         </Tracks>
       </Workshops>
