@@ -1,0 +1,32 @@
+[{
+        "title": "Cybersecurity",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "img": "cybersecurity.svg",
+        "alt": "talk"
+    },
+    {
+        "title": "Developement",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "img": "dev.svg",
+        "alt": "talk"
+    },
+
+    {
+        "title": "Talk 3",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "img": "cybersecurity.svg",
+        "alt": "talk"
+    },
+    {
+        "title": "Talk 4",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "img": "cybersecurity.svg",
+        "alt": "talk"
+    },
+    {
+        "title": "Talk 5",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "img": "cybersecurity.svg",
+        "alt": "talk"
+    }
+]

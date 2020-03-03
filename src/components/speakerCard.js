@@ -131,28 +131,28 @@ const SpeakerCard = ({
     <p> {detail} </p>
     <SocialMedia>
       <IconContainer>
-        <Link to={linkedin}>
+        <a href={linkedin} rel="noopener noreferrer" target="_blank">
           <img
             src={require("../images/logos/linkedin-icon-white.png")}
             alt="LinkedIn"
           />
-        </Link>
+        </a>
       </IconContainer>
       <IconContainer>
-        <Link to={facebook}>
+        <a href={facebook} rel="noopener noreferrer" target="_blank">
           <img
             src={require("../images/logos/facebook-icon-white.png")}
             alt="facebook"
           />
-        </Link>
+        </a>
       </IconContainer>
       <IconContainer>
-        <Link to={twitter}>
+        <a href={twitter} rel="noopener noreferrer" target="_blank">
           <img
             src={require("../images/logos/twitter-icon-white.png")}
             alt="twitter"
           />
-        </Link>
+        </a>
       </IconContainer>
     </SocialMedia>
   </StyltedCArd>

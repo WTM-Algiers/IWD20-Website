@@ -168,15 +168,6 @@ export default function MainHome() {
         <Partners>
           <div className="partner">
             <a
-              href="https://yassir.io/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={yassir} alt="yassir" width="50%"></img>
-            </a>
-          </div>
-          <div className="partner">
-            <a
               href="https://education.github.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -301,6 +292,7 @@ const EditionsContainer = styled.div`
     font-size: 48px;
     margin-top: 2%;
     font-weight: 500;
+    color: ${theme.light_mode.colors.title_dark};
   }
 `
 

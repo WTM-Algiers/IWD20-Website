@@ -1,0 +1,56 @@
+[{
+        "picture": "Fayçal Zemmour.jpg",
+        "name": "Fayçal ZEMMOUR",
+        "role": "Engineer",
+        "detail": "Orange Application for business",
+        "linkedin": "https://www.linkedin.com/in/fay%C3%A7al-zemmour-908680aa/?originalSubdomain=dz",
+        "facebook": "https://www.facebook.com/people/Fay%C3%A7al-Zemmour/100010969845387?_rdc=1&_rdr",
+        "twitter": "https://twitter.com/faycal_zemmour?s=20"
+    },
+    {
+        "picture": "Bachir Achache.jpg",
+        "name": "Bachir Achache",
+        "role": "Trainer & marketing consultant",
+        "detail": "SONELGAZ",
+        "linkedin": "https://www.linkedin.com/in/bachir-achache-69175910a/?originalSubdomain=dz",
+        "facebook": "https://web.facebook.com/ezel.biragdar.14?_rdc=1&_rdr",
+        "twitter": "#"
+    },
+    {
+        "picture": "Walid Fellah.jpg",
+        "name": "Walid FELLAH",
+        "role": "User Experience Designer",
+        "detail": "BEYN beyn.io",
+        "linkedin": "https://www.linkedin.com/in/walid-fellah/?originalSubdomain=dz",
+        "facebook": "https://www.facebook.com/walidweb7?_rdc=1&_rdr",
+        "twitter": "https://twitter.com/"
+    },
+    {
+        "picture": "Ferial Oucif.jpg",
+        "name": "Feriel OUCIF",
+        "role": "Digital Strategist",
+        "detail": "IONE Company",
+        "linkedin": "https://www.linkedin.com/in/ferial-oucif-635a6016b/?originalSubdomain=dz",
+        "facebook": "https://www.facebook.com/Hisabatic.ione?__tn__=lC-R&eid=ARCeYiZ-fKOYqrXF4E4mcIpG6khfp2cU2E6ONxyLhpmL4DcYzs7MFiXm4j6-PuCnHyRGhNjxXDRXc8an&hc_ref=ARQTxUrVqj1Sg5CQxDWfPpFthALoo1dNVl2UHA883lqevLNst320qUB04XO-j8MZJ6c&ref=nf_target",
+        "twitter": "https://twitter.com/"
+    },
+
+    {
+        "picture": "Mohamed Redha OUASET.jpg",
+        "name": "Mohamed Redtha OUASET",
+        "role": "CEO & Engineer",
+        "detail": "CMESA",
+        "linkedin": "https://www.linkedin.com/in/mohamedredhaoua/?originalSubdomain=dz",
+        "facebook": "https://www.facebook.com/ouasetmedredha?_rdc=1&_rdr",
+        "twitter": "https://twitter.com/redha_oua?s=20"
+    },
+    {
+        "picture": "Ikram Loubna Nour 02.jpg",
+        "name": "Ikram Loubna Nour",
+        "role": "Operation Manager",
+        "detail": "Nejma3",
+        "linkedin": "https://www.linkedin.com/in/ikram-loubna-nour-b36b81106/?originalSubdomain=dz",
+        "facebook": "https://www.facebook.com/ikramloubnanour",
+        "twitter": "https://twitter.com/"
+    }
+]
