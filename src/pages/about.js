@@ -30,7 +30,7 @@ const MentorsData = mentors.map(mbr => (
 const SpeakersData = speakers.map(mbr => (
   <SpeakerCard
     key={mbr.name}
-    picture={require(`../images/mentors/${mbr.img}`)}
+    picture={require(`../images/speakers/${mbr.img}`)}
     name={mbr.name}
     role={mbr.role}
     detail={mbr.detail}
@@ -42,7 +42,7 @@ const SpeakersData = speakers.map(mbr => (
 const TrainersData = trainers.map(mbr => (
   <SpeakerCard
     key={mbr.name}
-    picture={require(`../images/mentors/${mbr.img}`)}
+    picture={require(`../images/trainers/${mbr.img}`)}
     name={mbr.name}
     role={mbr.role}
     detail={mbr.detail}

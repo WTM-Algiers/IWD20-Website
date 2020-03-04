@@ -21,6 +21,8 @@ const Container = styled.div`
   text-align: center;
   align-items: center;
   h3 {
+    height: 40%;
+    min-width: 100%;
     font-family: sans-serif;
     color: #3e3c55;
     font-size: 100%;

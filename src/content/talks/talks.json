@@ -1,32 +1,26 @@
 [{
-        "title": "Cybersecurity",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "title": "Cyber Security in Algeria: Are you even concerned?",
+        "content": "Cyber Security is one of the most neglected fields in Algerian industry, Amina Meherhera will show us in her talk why that should not remain the case forever and how you, as a woman in tech, can be the one who'd change this situation as other excellent women did in other countries!",
         "img": "cybersecurity.svg",
-        "alt": "talk"
+        "alt": "cybersecurity"
     },
     {
-        "title": "Developement",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
+        "title": "Zoom in modern web/mobile development",
+        "content": "The shape of web and mobile apps development have been and still changing in a non-stop manner, but nowadays almost all major dev options have implemented a set of common key concepts influenced by the huge advancements around the web dev ecosystem.",
         "img": "dev.svg",
         "alt": "talk"
     },
 
     {
-        "title": "Talk 3",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
-        "img": "cybersecurity.svg",
+        "title": "How AI and Big Data are shaping our world view",
+        "content": "Should you trust your own opinions? In this talk Hichem Bouzara will explain the process through which Artificial Intelligence algorithms relying on Big Data are effectively shaping our points of view without us knowing it.",
+        "img": "bigdata.svg",
         "alt": "talk"
     },
     {
-        "title": "Talk 4",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
-        "img": "cybersecurity.svg",
-        "alt": "talk"
-    },
-    {
-        "title": "Talk 5",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum velit quis ligula malesuada, vitae condimentum orci porta.",
-        "img": "cybersecurity.svg",
+        "title": "How to design Human - Centered AI Products ? ",
+        "content": "confused with development of ai products ? don't know where to start ? this talk will help you get a clearer vision about it and guide you through the process of designing human centered ai product",
+        "img": "designAI.svg",
         "alt": "talk"
     }
 ]

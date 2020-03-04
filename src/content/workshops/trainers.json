@@ -1,47 +1,76 @@
 [{
-        "name": "speaker1",
-        "role": "role1",
-        "img": "default.png",
-        "detail": "details",
+        "name": "Meyssa Zouambi",
+        "role": "Flutter Trainer",
+        "img": "Meyssa_Zouambi.jpg",
+        "detail": "WTM ambassodor",
         "facebook": "",
         "twitter": "",
         "linkedin": ""
     },
     {
-        "name": "speaker1",
-        "role": "role1",
-        "img": "default.png",
-        "detail": "details",
+        "name": "Amina Tadjer",
+        "role": "Gatsby trainer",
+        "img": "amina tadjer.jpeg",
+        "detail": "Software developer",
         "facebook": "",
         "twitter": "",
         "linkedin": ""
     },
     {
-        "name": "speaker1",
-        "role": "role1",
-        "img": "default.png",
-        "detail": "details",
+        "name": "Nour Elhassane",
+        "role": "OOP trainer",
+        "img": "nourElhassane[1].jpg",
+        "detail": "3rd year ESI student",
         "facebook": "",
         "twitter": "",
         "linkedin": ""
     },
     {
-        "name": "speaker1",
-        "role": "role1",
-        "img": "default.png",
-        "detail": "details",
+        "name": "Sihem Bouhenniche",
+        "role": "Data science Trainer",
+        "img": "Sihem Bouhenniche.jpg",
+        "detail": "CS student",
         "facebook": "",
         "twitter": "",
         "linkedin": ""
     },
     {
-        "name": "speaker1",
-        "role": "role1",
-        "img": "default.png",
-        "detail": "details",
+        "name": "Hadjer Benmeziane",
+        "role": "AI Expert",
+        "img": "Hadjer benmeziane.jpg",
+        "detail": "head of school of ai",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Hadjer Ishak Bouchaki",
+        "role": "AI trainer",
+        "img": "hadjerIshakBouchaki.jpg",
+        "detail": "4th year ESI student",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Narimene Hannouni",
+        "role": "ML trainer",
+        "img": "Hennouni narimane.jpg",
+        "detail": "3rd year ESI student",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Celine Serbouh",
+        "role": "AI trainer",
+        "img": "celine serbouh.jpeg",
+        "detail": "3rd year ESI student",
         "facebook": "",
         "twitter": "",
         "linkedin": ""
     }
+
+
 
 ]
