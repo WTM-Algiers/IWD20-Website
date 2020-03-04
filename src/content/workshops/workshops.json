@@ -1,0 +1,26 @@
+[{
+        "imgsource": "gatsby.svg",
+        "altimg": "Gatsby workshop",
+        "title": "Web developement in Gatsby/React",
+        "content": "Learn how how build your first site with the powerful framework Gatsby"
+    },
+    {
+        "imgsource": "flutter.svg",
+        "altimg": "Flutter workshop",
+        "title": "Mobile developement in Flutter",
+        "content": "Build cool looking apps in record times using Flutter"
+    },
+    {
+        "imgsource": "ML.svg",
+        "altimg": "AI workshop",
+        "title": "Artificiel Intelligence",
+        "content": "Grasp the concepts behind intelligent apps and build one yourself"
+    },
+    {
+        "imgsource": "cs.svg",
+        "altimg": "Basic Computer Science",
+        "title": "Basic Computer Science",
+        "content": "Discover a new field and some of its core concepts"
+    }
+
+]

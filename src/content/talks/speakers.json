@@ -1,0 +1,47 @@
+[{
+        "name": "Hicham Bouzara",
+        "role": "Junior Data scientist",
+        "img": "Hichem.jpg",
+        "detail": "Yessir",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Amina Meherhera",
+        "role": "DevOps Engineer",
+        "img": "amina_meherhera.jpg",
+        "detail": "Innovia Solutions",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Djamaleddine Blillet",
+        "role": "Web/mobile consultant",
+        "img": "DJAMAL.jpg",
+        "detail": "Formini",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Mariam Zubair Khan",
+        "role": "General Manager",
+        "img": "default.png",
+        "detail": "Coca-cola Algeria",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    },
+    {
+        "name": "Aacode",
+        "role": "Content creator",
+        "img": "default.png",
+        "detail": "details",
+        "facebook": "",
+        "twitter": "",
+        "linkedin": ""
+    }
+
+]

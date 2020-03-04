@@ -9,7 +9,9 @@
             "accent_dark": "",
             "title_dark": "#3E3C55",
             "subtitle_dark": "#626263",
-            "dark": "#04091e"
+            "dark": "#04091e",
+            "bg_grey": "#F5F5F5",
+            "bg_grey_light": "#FAFAFA"
         }
 
     }

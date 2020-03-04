@@ -2,104 +2,53 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import theme from "../constants/theme.json"
 import Button from "../components/Button"
 import Track from "../components/Track"
-
-import gatsby from "../images/workshops/gatsby.svg"
-import flutter from "../images/workshops/flutter.svg"
-import ML from "../images/workshops/ML.svg"
-import CS from "../images/workshops/cs.svg"
+import content from "../content/tracks.json"
+import workshops from "../content/workshops/workshops.json"
 import SpeakerCard from "../components/speakerCard"
-
-// TODO : Implement Page
-// TODO : Add Description of IWD
-// TODO : Add past editions timeline
-// TODO : Add Ideathon , Confs , Workshops Sections
+import talkpic from "../images/icons/talk.svg"
+import talks from "../content/talks/talks.json"
+import speakers from "../content/talks/speakers.json"
+import mentors from "../content/ideathon/mentors.json"
+import trainers from "../content/workshops/trainers.json"
 // TODO : Add Speakers section
 
-const SpeakersList = [
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Fayçal ZEMMOUR",
-    role: "Engineer",
-    detail: "Orange Application for business",
-    linkedin:
-      "https://www.linkedin.com/in/fay%C3%A7al-zemmour-908680aa/?originalSubdomain=dz",
-    facebook:
-      "https://web.facebook.com/people/Fay%C3%A7al-Zemmour/100010969845387?_rdc=1&_rdr",
-    twitter: "https://twitter.com/faycal_zemmour?s=20",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Walid FELLAH",
-    role: "User Experience Designer",
-    detail: "BEYN beyn.io",
-    linkedin: "https://www.linkedin.com/in/walid-fellah/?originalSubdomain=dz",
-    facebook: "https://web.facebook.com/walidweb7?_rdc=1&_rdr",
-    twitter: "https://twitter.com/",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Feriel OUCIF",
-    role: "Digital Strategist",
-    detail: "IONE Company",
-    linkedin:
-      "https://www.linkedin.com/in/ferial-oucif-635a6016b/?originalSubdomain=dz",
-    facebook:
-      "https://web.facebook.com/Hisabatic.ione?__tn__=lC-R&eid=ARCeYiZ-fKOYqrXF4E4mcIpG6khfp2cU2E6ONxyLhpmL4DcYzs7MFiXm4j6-PuCnHyRGhNjxXDRXc8an&hc_ref=ARQTxUrVqj1Sg5CQxDWfPpFthALoo1dNVl2UHA883lqevLNst320qUB04XO-j8MZJ6c&ref=nf_target",
-    twitter: "https://twitter.com/",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Ikram Loubna Nour",
-    role: "Marketer",
-    detail: "ICONE Consultancy Agency",
-    linkedin:
-      "https://www.linkedin.com/in/ikram-loubna-nour-b36b81106/?originalSubdomain=dz",
-    facebook: "https://web.facebook.com/ikramloubnanour",
-    twitter: "https://twitter.com/",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Ikram Loubna Nour",
-    role: "Former Project Manager",
-    detail: "EADN",
-    linkedin:
-      "https://www.linkedin.com/in/ikram-loubna-nour-b36b81106/?originalSubdomain=dz",
-    facebook: "https://web.facebook.com/ikramloubnanour",
-    twitter: "https://twitter.com/",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Amel DELLI",
-    role: "Former Project Manager",
-    detail: "EADN",
-    linkedin: "https://www.linkedin.com/in/ameldelli/?originalSubdomain=dz",
-    facebook: "https://web.facebook.com/",
-    twitter: "https://twitter.com/Amel_DELLI?s=20",
-  },
-  {
-    picture: require("../images/speakers/amel.jpg"),
-    name: "Leila BENYOUCEF",
-    role: "",
-    detail: "",
-    linkedin:
-      "https://www.linkedin.com/in/leila-benyoucef/?originalSubdomain=dz",
-    facebook: "https://web.facebook.com/",
-    twitter: "https://twitter.com/",
-  },
-]
-
-const Speaker = SpeakersList.map(mbr => (
+const MentorsData = mentors.map(mbr => (
   <SpeakerCard
     key={mbr.name}
-    picture={mbr.picture}
+    picture={require(`../images/mentors/${mbr.picture}`)}
     name={mbr.name}
     role={mbr.role}
     detail={mbr.detail}
     linkedin={mbr.linkedin}
+    facebook={mbr.facebook}
+    twitter={mbr.twitter}
+  />
+))
+const SpeakersData = speakers.map(mbr => (
+  <SpeakerCard
+    key={mbr.name}
+    picture={require(`../images/speakers/${mbr.img}`)}
+    name={mbr.name}
+    role={mbr.role}
+    detail={mbr.detail}
+    linkedin={mbr.linkedin}
+    facebook={mbr.facebook}
+    twitter={mbr.twitter}
+  />
+))
+const TrainersData = trainers.map(mbr => (
+  <SpeakerCard
+    key={mbr.name}
+    picture={require(`../images/trainers/${mbr.img}`)}
+    name={mbr.name}
+    role={mbr.role}
+    detail={mbr.detail}
+    linkedin={mbr.linkedin}
+    facebook={mbr.facebook}
+    twitter={mbr.twitter}
   />
 ))
 
@@ -245,19 +194,6 @@ const TrackItem = styled.li`
   }
 `
 
-const Title = styled.h1`
-  font-family: sans-serif;
-  color: ${theme.light_mode.colors.title_dark};
-`
-
-const content = {
-  talks:
-    "Acquiring technical skills only never could be enough so we are having series of both technical and soft talks. Moreover, multiple panels will be held by stellar women who are going to share their successful stories in several fields.",
-  workshops:
-    "Since celebration could never be done without having some tech snacks, we are giving you , technology passionates, the opportunity to explore more about web development, mobile development and AI through fruitful workshops. As well as for no programmers, a special track is waiting to you.",
-  ideathon: `An ideathon is a moderated idea marathon that helps people address some of the most pressing challenges of our time. IWD Ideathon main goal is to help the community evolve, by attempting to solve problems related to a specific theme.Participants will work in teams and use design thinking and innovative learning practices to ideate and collaborate on possible solutions under mentorship of experienced coaches.`,
-}
-
 const Speakers = styled.div`
   display: flex;
   flex-direction: row;
@@ -273,7 +209,7 @@ const Speakers = styled.div`
   }
 `
 const Container = styled.div`
-  background-color: #f5f5f5;
+  background-color: ${props => props.bg || theme.light_mode.colors.bg_grey};
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -283,9 +219,9 @@ const Container = styled.div`
     font-size: 48px;
     margin-top: 2%;
     font-weight: 500;
+    color: ${theme.light_mode.colors.title_dark};
   }
 `
-const SpeakersContainer = styled(Container)``
 
 const Ideathon = styled(Container)`
   p {
@@ -309,7 +245,8 @@ const Ideathon = styled(Container)`
 `
 const Workshops = styled(Container)`
   background-color: #fafafa;
-  padding-bottom: 64px;
+
+  min-height: 90vh;
   p {
     margin-top: 5%;
     max-width: 80%;
@@ -319,10 +256,14 @@ const Workshops = styled(Container)`
     color: #4285f4;
     position: relative;
     span {
+      display: inline;
       position: relative;
       img {
         position: relative;
         top: 10px;
+        width: 70px;
+        margin: 0px;
+        padding-top: 10px;
       }
     }
   }
@@ -387,13 +328,16 @@ export default function about() {
           <i>Women's online safety</i>
         </p>
       </Ideathon>
-      {/**
-       * <SpeakersContainer>
+
+      <Container
+        bg={theme.light_mode.colors.bg_grey}
+        style={{
+          paddingBottom: "64px",
+        }}
+      >
         <h1> Our Mentors </h1>
-        <Speakers>{Speaker}</Speakers>
-      </SpeakersContainer>
-       * 
-       */}
+        <Speakers>{MentorsData}</Speakers>
+      </Container>
 
       <Workshops>
         <h1>
@@ -406,65 +350,62 @@ export default function about() {
             <img
               src={require("../images/workshops/learn.svg")}
               alt="learn workshops"
-              width="70px"
-              style={{
-                margin: 0,
-                paddingTop: 10,
-              }}
             />
           </span>
         </h1>
         <p>{content.workshops}</p>
         <Tracks>
-          <TrackItem>
-            <Track
-              imgsource={gatsby}
-              altimg="Gatsby workshop"
-              title="Web developement in Gatsby/React"
-              content="Learn how how build your first site with the powerful framework Gatsby"
-            ></Track>
-          </TrackItem>
-          <TrackItem>
-            <Track
-              imgsource={flutter}
-              altimg="Flutter workshop"
-              title="Mobile developement in Flutter"
-              content="Build cool looking apps in record times using Flutter"
-            ></Track>
-          </TrackItem>
-          <TrackItem>
-            <Track
-              imgsource={ML}
-              altimg="AI workshop"
-              title="Artificiel Intelligence"
-              content="Grasp the concepts behind intelligent apps and build one yourself"
-            ></Track>
-          </TrackItem>
-          <TrackItem>
-            <Track
-              imgsource={CS}
-              altimg="Basic Computer Science"
-              title="Basic Computer Science"
-              content="Discover a new field and some of its core concepts"
-            ></Track>
-          </TrackItem>
+          {workshops.map(workshop => (
+            <TrackItem>
+              <Track
+                imgsource={require(`../images/workshops/${workshop.imgsource}`)}
+                altimg={workshop.altimg}
+                title={workshop.title}
+                content={workshop.content}
+              ></Track>
+            </TrackItem>
+          ))}
         </Tracks>
       </Workshops>
-      {/**
-       * <Container>
+      <Container
+        bg={theme.light_mode.colors.bg_grey_light}
+        style={{
+          paddingBottom: "64px",
+        }}
+      >
         <h1> Our Trainers </h1>
-        <Speakers>{Speaker}</Speakers>
+        <Speakers>{TrainersData}</Speakers>
       </Container>
-       * 
-       */}
-      {/**
-          * <Talks></Talks>
-       * <Container>
+      <Talks>
+        <h1>
+          Talks & Panel{" "}
+          <span>
+            <img src={talkpic} alt="Talks and panels" />
+          </span>
+        </h1>
+        <p>{content.talks}</p>
+        <Tracks>
+          {talks.map(talk => (
+            <TrackItem>
+              <Track
+                imgsource={require(`../images/talks/${talk.img}`)}
+                altimg={talk.alt}
+                title={talk.title}
+                content={talk.content}
+              ></Track>
+            </TrackItem>
+          ))}
+        </Tracks>
+      </Talks>
+      <Container
+        bg={theme.light_mode.colors.bg_grey}
+        style={{
+          paddingBottom: "64px",
+        }}
+      >
         <h1> Speakers </h1>
-        <Speakers>{Speaker}</Speakers>
+        <Speakers>{SpeakersData}</Speakers>
       </Container>
-       * 
-       */}
     </Layout>
   )
 }

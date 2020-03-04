@@ -292,6 +292,7 @@ const EditionsContainer = styled.div`
     font-size: 48px;
     margin-top: 2%;
     font-weight: 500;
+    color: ${theme.light_mode.colors.title_dark};
   }
 `
 
