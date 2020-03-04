@@ -3,7 +3,8 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import theme from "../constants/theme.json"
-import Main from "../components/layout/MainConstruction"
+import { MainWrapper as Wrapper } from "../components/Container"
+import agendapic from "../images/agenda-svg.svg"
 // TODO : Implement Page
 // TODO : Add Agenda to the page ( the actual agenda)
 
@@ -21,12 +22,19 @@ const StyleadHead = styled.div`
     margin: 0 5%;
   }
 `
-
+const Agenda = styled.img`
+  width: 100%;
+  padding-top: 5%;
+  @media screen and (max-width: 768px) {
+  }
+`
 export default function agenda() {
   return (
     <Layout>
       <SEO title="Agenda"></SEO>
-      <Main title="Agenda"></Main>
+      <Wrapper>
+        <Agenda src={agendapic} alt="agenda of event"></Agenda>
+      </Wrapper>
     </Layout>
   )
 }
