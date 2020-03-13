@@ -4,6 +4,8 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import theme from "../constants/theme.json"
 import { MainWrapper as Wrapper } from "../components/Container"
+import Loading from "../components/Loading"
+import LazyLoad from "react-lazyload"
 import agendapic from "../images/agenda-svg.svg"
 // TODO : Implement Page
 // TODO : Add Agenda to the page ( the actual agenda)
@@ -33,7 +35,9 @@ export default function agenda() {
     <Layout>
       <SEO title="Agenda"></SEO>
       <Wrapper>
-        <Agenda src={agendapic} alt="agenda of event"></Agenda>
+        <LazyLoad key="agenda" placeholder={<Loading></Loading>}>
+          <Agenda src={agendapic} alt="agenda of event"></Agenda>
+        </LazyLoad>
       </Wrapper>
     </Layout>
   )

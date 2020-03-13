@@ -5,6 +5,8 @@ import Button from "../Button"
 import Record from "../Record"
 import { Link } from "gatsby"
 import theme from "../../constants/theme.json"
+import Loading from "../../components/Loading"
+import LazyLoad from "react-lazyload"
 /// pictures :
 import homeHead from "../../images/super_woman.svg"
 import homeAbout from "../../images/logo.svg"
@@ -16,10 +18,10 @@ import marker from "../../images/icons/marker.svg"
 import event from "../../images/icons/event_icon.svg"
 import EditionCard from "../../components/editionCard"
 import ReverseEditionCard from "../../components/ReverseEditionCard"
-import yassir from "../../images/partners/yassir-seeklogo.com.svg"
 import techno from "../../images/partners/techno.png"
 import soc from "../../images/partners/societe.png"
 import sai from "../../images/partners/schoolai.png"
+
 export default function MainHome() {
   return (
     <Wrapper>
@@ -52,10 +54,14 @@ export default function MainHome() {
             Register
           </Button>
         </Content>
-        <CustomImg src={homeHead} alt="Landing image"></CustomImg>
+        <LazyLoad key="mainhead" placeholder={<Loading></Loading>}>
+          <CustomImg src={homeHead} alt="Landing image"></CustomImg>
+        </LazyLoad>
       </Section>
       <Section2>
-        <CustomImg2 src={homeAbout} alt="Event Logo"></CustomImg2>
+        <LazyLoad key="eventlogo" placeholder={<Loading></Loading>}>
+          <CustomImg2 src={homeAbout} alt="Event Logo"></CustomImg2>
+        </LazyLoad>
         <Content>
           <h5>ABOUT THE EVENT</h5>
           <Title>International Women's Day 2020</Title>

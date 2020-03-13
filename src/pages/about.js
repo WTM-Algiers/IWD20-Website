@@ -1,4 +1,6 @@
 import React from "react"
+import Loading from "../components/Loading"
+import LazyLoad from "react-lazyload"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -281,7 +283,9 @@ export default function about() {
       </StyleadHead>
       <DetailContent>
         <ImgContainer>
-          <img src={require("../images/super_woman.svg")} alt="about IWD" />
+          <LazyLoad key="super_woman" placeholder={<Loading></Loading>}>
+            <img src={require("../images/super_woman.svg")} alt="about IWD" />
+          </LazyLoad>
         </ImgContainer>
         <Content>
           <h5>ABOUT THE EVENT</h5>

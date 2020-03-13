@@ -1,10 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-
+import Loading from "../components/Loading"
+import LazyLoad from "react-lazyload"
 export default function Track({ imgsource, altimg, title, content }) {
   return (
     <Container>
-      <Logo src={imgsource} alt={altimg}></Logo>
+      <LazyLoad key={altimg} placeholder={<Loading></Loading>}>
+        <Logo src={imgsource} alt={altimg}></Logo>
+      </LazyLoad>
+
       <Content>
         <h3>{title}</h3>
         <p>{content}</p>

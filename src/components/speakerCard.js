@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import Loading from "../components/Loading"
+import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 import theme from "../constants/theme.json"
 const StyltedCArd = styled.div`
@@ -124,7 +125,9 @@ const SpeakerCard = ({
       */}
 
     <ProfilePic>
-      <img src={picture} alt="profiles" />
+      <LazyLoad key={name} placeholder={<Loading></Loading>}>
+        <img src={picture} alt="profiles" />
+      </LazyLoad>
     </ProfilePic>
     <h1> {name} </h1>
     <h2> {role} </h2>
