@@ -112,7 +112,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={wtm} alt="wtm-algiers"></img>
+              <img src={wtm} alt="wtm-algiers"  loading="lazy"></img>
             </a>
           </div>
           <div className="partner">
@@ -121,7 +121,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={gdg} alt="gdg-algiers"></img>
+              <img src={gdg} alt="gdg-algiers"  loading="lazy"></img>
             </a>
           </div>
         </Partners>
@@ -149,6 +149,7 @@ export default function MainHome() {
                 src={incubator}
                 alt="enp incubator by djezzy"
                 width="50%"
+                loading="lazy"
               ></img>
             </a>
           </div>
@@ -158,7 +159,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={sai} alt="school of ai"></img>
+              <img src={sai} alt="school of ai"  loading="lazy"></img>
             </a>
           </div>
         </Partners>
@@ -178,7 +179,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={github} alt="github education"></img>
+              <img src={github} alt="github education"  loading="lazy"></img>
             </a>
           </div>
           <div className="partner">
@@ -187,7 +188,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={techno} alt="techno" width="70%"></img>
+              <img src={techno} alt="techno" width="70%"  loading="lazy"></img>
             </a>
           </div>
           <div className="partner">
@@ -196,7 +197,7 @@ export default function MainHome() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={soc} alt="cgea"></img>
+              <img src={soc} alt="cgea"   loading="lazy"></img>
             </a>
           </div>
         </Partners>

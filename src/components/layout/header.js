@@ -7,7 +7,7 @@ import theme from "../../constants/theme.json"
 const Header = () => (
   <StyledHeader>
     <Link to="/">
-      <StyledLogo src={logo}></StyledLogo>{" "}
+      <StyledLogo src={logo} alt="logo"></StyledLogo>{" "} 
     </Link>
     <h1
       style={{
